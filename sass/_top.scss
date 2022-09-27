@@ -1,0 +1,638 @@
+// ＠＠＠＠＠＠＠＠＠
+// 基本記述
+// ＠＠＠＠＠＠＠＠＠
+@charset "utf-8";
+
+
+// google-fonts
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+
+
+  // ＠＠＠＠＠＠＠＠＠
+  // レスポンシブ記述
+// ＠＠＠＠＠＠＠＠＠
+
+//マップ型変数breakpointsを定義
+$breakpoints: (
+
+//キー  値
+  'sp': '(max-width: 980px)', //980px以下用の表示
+  'md': '(min-width: 981px)', //981px以上用の表示
+) !default;
+
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+//map-get(マップ型変数, キー)で値を取得
+@media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+
+@include mq(sp) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@include mq(md) {
+  .is-sp {
+    display: none;
+  }
+}
+
+
+// ＠＠＠＠＠＠＠＠＠
+// 共通事項定義
+// ＠＠＠＠＠＠＠＠＠
+
+// colors
+$font-color-black:#000000;
+$font-color-white:#FFFFFF;
+$font-color-main:#57B07B;
+$main-color:#FFFAEC;
+$link-color: #237EE9;
+
+.link-color {
+  color: $link-color;
+}
+
+
+
+//背景色
+
+.bgc-green {
+  background-color:#F1F8EC;
+}
+
+.bgc-deep-green {
+  background-color:#57B07B;
+}
+
+.bg-dark-button  {
+  background: rgba(87, 69, 70, 0.6);
+  display: block  ;
+  height: 100%;
+  border-radius: 36px;
+  text-align: center;
+} 
+
+
+//セクションタイトル
+.section_title {
+  color: $font-color-main;
+  text-align: center;
+  font-weight: 700;
+}
+
+.section-ttl-en {
+  font-size: 18px;
+  @include mq('sp'){
+    font-size: 14px;
+  }
+}
+
+.section-ttl-ja {
+  font-size: 44px;
+  @include mq('sp'){
+    font-size: 32px;
+  }
+}
+
+
+
+
+
+
+// 各種ボタン
+a {
+  color: $font-color-black;
+}
+
+
+
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  @include mq('sp'){
+    background-color: #FFFAEC;
+  }
+}
+
+//フォント
+$font-en:'Titillium Web';
+$font-ja:'Noto Sans JP', sans-serif;
+
+
+body{
+  font-family: $font-ja,$font-en;
+  font-size:  16px;
+  color: $font-color-black;
+  max-width: 100%;
+  @include mq('sp'){
+    font-size: 16px;
+  }
+}
+
+.body-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.inner {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+
+img {
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding:0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+main {
+  overflow: hidden; 
+}
+
+// ＠＠＠＠＠＠＠＠＠
+// ホバーアニメーション
+// ＠＠＠＠＠＠＠＠
+.opacity {
+  &:hover {
+    opacity: 0.7;
+    transition: ease .2s;
+  }
+}
+
+
+
+
+// ＠＠＠＠＠＠＠＠＠
+// インナー
+// ＠＠＠＠＠＠＠＠
+
+
+
+
+// ＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+/* ハンバーガーメニュー
+// ＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+/*　ハンバーガーボタン　*/
+.hamburger {
+  @include mq('sp'){
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+}
+.hamburger span {
+  @include mq('sp'){
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : $font-color-main;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+}
+.hamburger span:nth-child(1) {
+  top: 10px;
+}
+.hamburger span:nth-child(2) {
+  top: 20px;
+}
+.hamburger span:nth-child(3) {
+  top: 30px;
+}
+
+/* ナビ開いてる時のボタン */
+.hamburger.active span:nth-child(1) {
+  top : 16px;
+  left: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+
+.hamburger.active span:nth-child(2),
+.hamburger.active span:nth-child(3) {
+  top: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+
+
+
+
+/* アコーディオンの中身 */
+
+.accordion {
+  @include mq('sp'){
+    position: fixed;
+    top: 0;
+  }
+}
+
+.accordion-title {
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+.accordion-content {
+  display: none;
+  padding: 10px 20px;
+}
+.accordion-content p {
+  font-size: 13px;
+  line-height: 1.5;
+}
+/* タイトルの背景色 */
+.accordion-item:nth-of-type(1) .accordion-title {
+  background-color: #7f7fff;
+}
+
+
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+//header
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+
+header {
+  width: 100%;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 0 0 60px 60px;
+  margin-bottom: 36px;
+  box-shadow: 0px 4px 20px 0px #435F4E0F;
+  z-index: 10;
+
+  
+  @include mq('sp'){
+    height: 74.13px;
+    margin-bottom: 18px;
+    border-radius: 0 0 30px 30px;
+    position: fixed;
+    z-index: 1000;
+  }
+}
+
+.accordion .active {
+@include mq('sp'){
+  border-radius: 0;
+}
+}
+
+
+
+.header_inner {
+  @include mq('sp'){
+    padding: 15.54px 20px 14.35px 20px;
+    position: fixed;
+    top: 0;
+  }
+}
+
+.header_top {
+  display: flex;
+  font-size: 14px;
+  max-width: 1000px;
+  margin: auto;
+  @include mq('md'){
+    padding-top: 20px;
+  }
+}
+
+.header_top_left {
+  @include mq('sp'){
+    a {
+      color: $font-color-main;
+    }
+  }
+}
+
+
+
+
+.header_top_right_menu {
+  display: flex;
+}
+
+
+
+.header_top_right {
+  margin-left: auto;
+}
+
+
+.header_top_right_list {
+  position: relative;
+
+  &:not(:first-child){
+    :before {
+      position: absolute;
+      top: 50%;
+      left: -24px;
+      content: "";
+      width: 1px;
+      height: 10px;
+      display: block;
+      transform: translate(-50%, -50%);
+      // transform: translateY(-50%);
+      // transform: translateX(-50%);
+      background-color: black;/*線の色*/
+      }
+    }
+  }
+
+  _::-webkit-full-page-media, _:future, :root   .header_top_right_list {
+    position: relative;
+    &:not(:first-child){
+      :before {
+        position: absolute;
+        top: 50%;
+        content: "";
+        width: 1px;
+        height: 10px;
+        display: block;
+        transform: translate(-50%, -50%);
+        background-color: black;/*線の色*/
+        }
+      }
+    }
+
+  .header_top_right_link {
+      margin-left: 24px;
+      margin-right: 24px;
+      position: relative;
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $font-color-main;
+        transform: scale(0,1);
+        transform-origin: center top;
+        transition: transform 0.2s;
+      }
+      &:hover {
+        color: $font-color-main;
+        font-weight: 700;
+        &::after {
+          transform: scale(1, 1);
+        }
+      }
+  }
+
+
+
+  .header_bottom {
+    margin-top: 20px;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    height: 40px;
+  }
+  
+  .header_bottom_menu {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 2;
+  }
+  
+  .header_bottom_link {
+    color: $font-color-main;
+    position: relative;
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background: $font-color-main;
+        transform: scale(0,1);
+        transform-origin: center top;
+        transition: transform 0.2s;
+      }
+      &:hover {
+        color: $font-color-main;
+        font-weight: 700;
+        &::after {
+          transform: scale(1, 1);
+        }
+      }
+  }
+
+
+  .header_bottom_list {
+    position: relative;
+    &:not(:first-child){
+      :before {
+        position: absolute;
+        left: -30px;
+        top: 50%;
+        content: "";
+        width: 1px;
+        height: 15px;
+        display: block;
+        transform: translate(-50%, -50%);
+        background-color: $font-color-main;/*線の色*/
+        }
+      }
+    }
+
+    .header_bottom_link {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .btn-green {
+      background-color: $font-color-main;
+      border: 1px solid currentColor;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      width: 115px;
+      height: 40px;
+      position: relative;
+      &::after {
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        content: "";
+        width: 0%;
+        height: 0px;
+        background: $font-color-main;
+        // transform: scale(0,1);
+        transform-origin: center top;
+        transition: transform 0.2s;
+      }
+      &:hover {
+        background: #60C287;
+        color: $font-color-white;
+        font-weight: 700;
+        // border: 1px solid #60C287;
+        transition: .2s;
+      }
+    }
+
+
+
+// ヘッダーのアコーディオンメニュー
+.accordion-item {
+  background-color: #fff;
+  width: 100%;
+  display: none;
+  padding: 0 38px;
+  border-radius: 0 0 30px 30px;
+  @include mq('sp'){
+    margin-top: 57.13px;
+  }
+}
+
+
+.accordion-item_list {
+  padding: 20px 0;
+  border-bottom: 1px solid #E4EEDD;
+  height: 70px;
+}
+
+.accordion-item_link {
+  color: $font-color-main;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.arrow-right {
+  position: relative;
+  display: block;
+  transform: translateY(-100%);
+  // right: -110%;
+  border-radius: 26px;
+  width: 26px;
+  height: 26px;
+  border: 1px solid $font-color-main;
+  margin-left: auto;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    right: 8px;
+    top: 10px;
+    width: 5px;
+    height: 5px;
+    border-top: solid 1px currentColor;
+    border-right: solid 1px currentColor;
+    -webkit-transform: rotate(45deg) ;
+            transform: rotate(45deg) ;
+      }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      color: $font-color-main;
+      position: absolute;
+      margin-left: 8px;
+      margin-top: 12px;
+      width: 8px;
+      height: 1px;
+      background-color: currentColor;
+
+
+      
+    }
+}
+
+.accordion-item_sub-menu {
+  padding: 20px 0 14px 0;
+}
+
+.accordion-item_sub-list {
+  padding-bottom: 14px;
+}
+
+.accordion-item_sub-link {
+  color: $font-color-main;
+  font-size: 16px;
+}
+
+
+
+
+
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+//スクロールトップ
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+.scroll-top {
+  // ボタンを右下で固定位置にする
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+
+
+
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+//main-visual
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+
+
+
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+// news
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+
+
