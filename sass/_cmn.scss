@@ -1,0 +1,173 @@
+// ＠＠＠＠＠＠＠＠＠
+// 基本記述
+// ＠＠＠＠＠＠＠＠＠
+@charset "utf-8";
+
+// ＠＠＠＠＠＠＠＠＠
+// レスポンシブ記述
+// ＠＠＠＠＠＠＠＠＠
+
+//マップ型変数breakpointsを定義
+$breakpoints: (
+  //キー  値
+  "sp": "(max-width: 980px)",
+  //980px以下用の表示
+  "md": "(min-width: 981px)",
+  //981px以上用の表示
+) !default;
+
+//メディアクエリ用のmixinを定義。デフォ値はmd
+@mixin mq($breakpoint: md) {
+  //map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}
+
+@include mq(sp) {
+  .is-pc {
+    display: none;
+  }
+}
+
+@include mq(md) {
+  .is-sp {
+    display: none;
+  }
+}
+
+// ＠＠＠＠＠＠＠＠＠
+// 共通事項定義
+// ＠＠＠＠＠＠＠＠＠
+
+// colors
+$font-color-black: #000000;
+$font-color-white: #ffffff;
+$font-color-main: #57b07b;
+$main-color: #fffaec;
+$link-color: #237ee9;
+
+.link-color {
+  color: $link-color;
+}
+
+//背景色
+
+.bgc-green {
+  background-color: #f1f8ec;
+}
+
+.bgc-deep-green {
+  background-color: #57b07b;
+}
+
+.bg-dark-button {
+  background: rgba(87, 69, 70, 0.6);
+  display: block;
+  height: 100%;
+  border-radius: 36px;
+  text-align: center;
+}
+
+//セクションタイトル
+.section_title {
+  color: $font-color-main;
+  text-align: center;
+  font-weight: 700;
+}
+
+.section-ttl-en {
+  font-size: 18px;
+  @include mq("sp") {
+    font-size: 14px;
+  }
+}
+
+.section-ttl-ja {
+  font-size: 44px;
+  @include mq("sp") {
+    font-size: 32px;
+  }
+}
+
+// 各種ボタン
+a {
+  color: $font-color-black;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  @include mq("sp") {
+  }
+}
+
+//フォント
+$font-en: "Titillium Web";
+$font-ja: "Noto Sans JP", sans-serif;
+
+body {
+  font-family: $font-en, $font-ja;
+  font-size: 16px;
+  color: $font-color-black;
+  max-width: 100%;
+  @include mq("sp") {
+    font-size: 16px;
+  }
+}
+
+// ＠＠＠＠＠＠＠＠＠
+// インナー
+// ＠＠＠＠＠＠＠＠
+
+.inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  overflow: hidden;
+}
+
+// ＠＠＠＠＠＠＠＠＠
+// ホバーアニメーション
+// ＠＠＠＠＠＠＠＠
+.opacity {
+  &:hover {
+    opacity: 0.7;
+    transition: ease 0.2s;
+  }
+}
