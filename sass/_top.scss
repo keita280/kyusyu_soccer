@@ -14,7 +14,7 @@
 // ＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
 
 /* アコーディオンの中身 */
-@use "cmn";
+@use 'cmn';
 .accordion {
   @include cmn.mq("sp") {
     position: fixed;
