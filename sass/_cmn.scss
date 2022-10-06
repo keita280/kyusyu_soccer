@@ -42,10 +42,8 @@ $breakpoints: (
 // ＠＠＠＠＠＠＠＠＠
 
 // colors
+$color-blue:#013FB4;
 $font-color-black: #000000;
-$font-color-white: #ffffff;
-$font-color-main: #57b07b;
-$main-color: #fffaec;
 $link-color: #237ee9;
 
 .link-color {
@@ -70,26 +68,6 @@ $link-color: #237ee9;
   text-align: center;
 }
 
-//セクションタイトル
-.section_title {
-  color: $font-color-main;
-  text-align: center;
-  font-weight: 700;
-}
-
-.section-ttl-en {
-  font-size: 18px;
-  @include mq("sp") {
-    font-size: 14px;
-  }
-}
-
-.section-ttl-ja {
-  font-size: 44px;
-  @include mq("sp") {
-    font-size: 32px;
-  }
-}
 
 // 各種ボタン
 a {
@@ -160,14 +138,4 @@ a {
 
 main {
   overflow: hidden;
-}
-
-// ＠＠＠＠＠＠＠＠＠
-// ホバーアニメーション
-// ＠＠＠＠＠＠＠＠
-.opacity {
-  &:hover {
-    opacity: 0.7;
-    transition: ease 0.2s;
-  }
 }

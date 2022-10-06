@@ -6,7 +6,4 @@
 //@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
-jQuery("#hamburger").on("click", function () {
-  jQuery("#accordion-item").slideToggle();
-});
 
