@@ -136,10 +136,20 @@ main {
   padding: 26px 30px;
   line-height: 24px;
   font-family: "Noto Sans JP", sans-serif;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.header_bottom_list:hover {
+  background-color: #000;
 }
 
 .header_bottom_link {
   color: #fff;
+}
+
+.mv {
+  position: relative;
+  z-index: 10;
 }
 
 .mv-inner {
@@ -171,99 +181,293 @@ main {
 }
 
 .twitter-news {
+  background: url(../img/twitter-news.png) no-repeat center center/cover;
   position: absolute;
   width: 123px;
   height: 123px;
   bottom: 27%;
   left: 85%;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.twitter-news:hover {
+  background: url(../img/twitter-news-blue.png) no-repeat center center/cover;
 }
 
-.news-list {
-  list-style: none outside;
-  margin: 0;
-  padding: 0;
+.top-news {
+  background: url(../img/top-news-bg.png);
+  margin-top: -60px;
+  padding-bottom: 165.15px;
+  position: relative;
+}
+.top-news::after {
+  content: "";
+  position: absolute;
+  bottom: -35%;
+  right: 10%;
+  background: url(../img/news-ttm.png) no-repeat center center/contain;
+  width: 230px;
+  height: 530.18px;
 }
 
-.news-list .item a {
+.top-news-inner {
+  max-width: 800px;
+}
+
+.top-ttl-wrapper {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.top-news-ttl {
+  font-size: 45px;
+  color: #013FB4;
+}
+.top-news-ttl > span {
+  display: block;
+  color: #000000;
+  font-size: 16px;
+}
+
+.top-news-list {
+  padding: 0 30px;
+  margin-bottom: 48.5px;
+}
+.top-news-list > .top-news-item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   text-decoration: none;
   color: #333;
-  border-bottom: 1px solid #CCC;
   padding: 20px 20px;
+  background-image: linear-gradient(to right, #000, #000 2px, transparent 5px, transparent 8px); /* 幅2の線を作る */
+  background-size: 8px 1px; /* グラデーションの幅・高さを指定 */
+  background-position: left bottom; /* 背景の開始位置を指定 */
+  background-repeat: repeat-x; /* 横向きにのみ繰り返す */
+}
+.top-news-list > .top-news-item a:hover .top-news-cat-info, .top-news-list > .top-news-item a:hover .top-news-post, .top-news-list > .top-news-item a:hover .arrow-wrapper {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  opacity: 0.7;
+}
+.top-news-list > .top-news-item a:hover .top-news-cat-info.arrow-wrapper, .top-news-list > .top-news-item a:hover .top-news-post.arrow-wrapper, .top-news-list > .top-news-item a:hover .arrow-wrapper.arrow-wrapper {
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
 }
 
-.news-list .item:first-child a {
-  border-top: 1px solid #CCC;
+.top-news-cat-wrapper {
+  width: 144px;
 }
 
-.news-list .item .date {
-  margin: 0;
-  min-width: 140px;
-  font-size: 16px;
-  color: #999;
-  padding: 0 20px 0 0;
-}
-
-.news-list .item .category {
-  margin: 0;
-  min-width: 140px;
-  padding: 0 20px 0 0;
-}
-
-.news-list .item .category span {
-  background: #999;
-  color: #FFF;
+.top-news-cat-info > span {
+  height: 24px;
+  border-radius: 5px 0px;
+  background: #013FB4;
+  color: #fff;
   text-align: center;
   display: inline-block;
   padding: 5px 20px;
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1;
 }
 
-.news-list .item .title {
-  margin: 0;
-  width: 100%;
+.top-news-cat-register > span {
+  height: 24px;
+  border-radius: 5px 0px;
+  background: #fff;
+  color: #000000;
+  border: #000000 1px solid;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 15px;
+  line-height: 1;
 }
 
-.news-list .item a:hover .title {
-  color: #00F;
+.top-news-cat-game > span {
+  height: 24px;
+  border-radius: 5px 0px;
+  background: #fff;
+  color: #013FB4;
+  border: #013FB4 1px solid;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 15px;
+  line-height: 1;
 }
 
-@media screen and (max-width: 767px) {
-  .news-list .item a {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  .news-list .item .date {
-    min-width: 100px;
-  }
-  .news-list .item .title {
-    margin-top: 10px;
-  }
+.top-news-date {
+  color: #e20606;
+  line-height: 35px;
+  -webkit-transform: translateY(-14px);
+          transform: translateY(-14px);
 }
+
+.top-news-name {
+  padding-right: 30px;
+  -webkit-transform: translateY(-14px);
+          transform: translateY(-14px);
+}
+
+.top-news-post {
+  width: calc(100% - 144px);
+}
+
 .top-news-article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.arrow_right::before { /* くの字の表示設定 */
+.arrow-wrapper {
+  font-size: 18px;
+  color: #000000;
+  font-weight: 700;
+  display: inline-block;
+  margin-left: -29px;
+  height: 29px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.arrow-right {
+  position: relative;
+  display: block;
+  border-radius: 29px;
+  width: 29px;
+  height: 30px;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+  border: 1px solid #000;
+}
+.arrow-right:before {
   content: "";
-  margin: auto;
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 2px;
-  width: 13px; /* くの字を山なりに見た時、左側の長さ */
-  height: 13px; /* くの字を山なりに見た時、右側の長さ */
-  border-top: 3px solid #000; /* くの字を山なりに見た時、左側の太さと色 */
-  border-right: 3px solid #000; /* くの字を山なりに見た時、右側の太さと色 */
+  right: 9px;
+  top: 10.5px;
+  width: 7px;
+  height: 7px;
+  border-top: solid 1px currentColor;
+  border-right: solid 1px currentColor;
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg); /* くの字の向き */
+  transform: rotate(45deg);
+}
+.arrow-right:after {
+  content: "";
+  display: block;
+  position: absolute;
+  position: absolute;
+  margin-left: 9px;
+  margin-top: 14px;
+  width: 9px;
+  height: 1px;
+  background-color: #000000;
+}
+
+.btn-soccer {
+  width: 308px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #000;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.btn-soccer::before {
+  position: absolute;
+  content: "";
+  background: url(../img/ball.png) no-repeat center center/cover;
+  width: 26.68px;
+  height: 26.68px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 5%;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+.btn-soccer:hover {
+  font-size: 24px;
+  background-color: #D6E4FF;
+}
+.btn-soccer:hover::before {
+  left: 85%;
+}
+
+.top-tournament {
+  background: url(../img/top-tounament-bg.png) no-repeat center center/cover;
+  padding: 57px 40px 102.15px 40px;
+}
+
+.top-ttl-wrapper-tournament {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.top-tornament-ttl {
+  font-size: 45px;
+  color: white;
+}
+.top-tornament-ttl > span {
+  display: block;
+  color: white;
+  font-size: 16px;
+}
+
+.tournament-container {
+  /* グリッドコンテナ */
+  display: grid;
+  /* 最小100px、最大1frの列を繰り返しつくる */
+  grid-template-columns: repeat(4, 200px);
+  /* 余白 */
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+  row-gap: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tournament-button {
+  margin-top: 93.85px;
+}
+
+.img_container {
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.6s ease all;
+  transition: 0.6s ease all;
+}
+.img_container img:nth-child(1) {
+  opacity: 0;
+}
+.img_container:hover img:nth-child(2) {
+  opacity: 0;
+}
+.img_container:hover img:nth-child(1) {
+  opacity: 1;
+}
+
+img:nth-child(2) {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
