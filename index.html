@@ -39,6 +39,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css"
       media="screen and (max-width:767px)"
     />
+
+    <!-- WOW -->
+    <!--css-->
+    <link rel="stylesheet" href="css/animate.css" />
+    <!--js-->
+    <script src="js/wow.min.js" type="text/javascript"></script>
+    <script>
+      new WOW().init();
+    </script>
+
     <!-- jquery & iScroll -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
@@ -50,7 +60,7 @@
   </head>
 
   <body class="">
-    <header class="accordion" id="header">
+    <header class="is-pc">
       <div class="header_inner">
         <div class="header_top inner">
           <!-- PC用のh１ -->
@@ -103,63 +113,50 @@
           </ul>
         </nav>
       </div>
-
-      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@ -->
-      <!-- ハンバーガー -->
-      <!-- @@@@@@@@@@@@@@@@@@@@@@@@@ -->
-      <div class="hamburger is-sp js-accordion-title" id="hamburger">
-        <span class="is-sp"></span>
-        <span></span>
-        <span></span>
-        <span class="hum_text">MENU</span>
-      </div>
-
-      <nav class="accordion-item is-sp" id="accordion-item">
-        <ul class="accordion-item_menu">
-          <li class="accordion-item_list">
-            <a class="accordion-item_link" href="/about.html"
-              >HOME<span class="arrow-right"></span
-            ></a>
-          </li>
-          <li class="accordion-item_list">
-            <a class="accordion-item_link" href="/news.html"
-              >連盟概要<span class="arrow-right"></span
-            ></a>
-          </li>
-          <li class="accordion-item_list">
-            <a class="accordion-item_link" href="/schedule.html"
-              >加盟チーム<span class="arrow-right"></span
-            ></a>
-          </li>
-          <li class="accordion-item_list">
-            <a class="accordion-item_link" href="/reference.html"
-              >大会情報<span class="arrow-right"></span
-            ></a>
-          </li>
-          <li class="accordion-item_list">
-            <a class="accordion-item_link" href="/strong.html"
-              >加盟登録<span class="arrow-right"></span
-            ></a>
-          </li>
-          <li class="accordion-item_list">
-            <a class="accordion-item_link" href="/admission.html"
-              >お知らせ<span class="arrow-right"></span
-            ></a>
-          </li>
-          <li class="accordion-item_list">
-            <a class="accordion-item_link" href="/admission.html"
-              >関連リンク<span class="arrow-right"></span
-            ></a>
-          </li>
-          <li class="accordion-item_list">
-            <a class="accordion-item_link" href="/admission.html"
-              >お知らせ<span class="arrow-right"></span
-            ></a>
-          </li>
-        </ul>
-      </nav>
     </header>
 
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- ハンバーガー -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <header class="pc-header is-sp">
+      <div class="humberger" id="toggle">
+        <div id="toggle-box">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="humberger-text" id="humberger-text">MENU</p>
+      </div>
+      <!-- <div id="nav-content">
+        <nav>
+          <ul>
+            <li ontouchstart=""><a class="nav-content-link" href="#">HOME</a></li>
+            <li ontouchstart=""><a class="nav-content-link" href="#">連盟概要</a></li>
+            <li ontouchstart=""><a class="nav-content-link" href="#">加盟チーム</a></li>
+            <li ontouchstart=""><a class="nav-content-link" href="#">大会情報</a></li>
+            <li ontouchstart=""><a class="nav-content-link" href="#">加盟登録</a></li>
+            <li ontouchstart=""><a class="nav-content-link" href="#">お知らせ</a></li>
+            <li ontouchstart=""><a class="nav-content-link" href="#">関連リンク</a></li>
+            <li ontouchstart=""><a class="nav-content-link" href="#">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <a class="nav-twiitter">
+          <img src="./img/twitter-humberger.png" alt="" />
+        </a>
+        <div class="nav-logo">
+          <div class="nav-logo-ttl">九州クラブユースサッカー連盟</div>
+          <div class="nav-logo-img">
+            <a href=""><img src="./img/nav-logo.png" alt="" /></a>
+          </div>
+        </div>
+      </div> -->
+
+      <h1 class="h1-pc">
+        <a href="">
+          <img src="./img/header_logo_sp.png" alt="" />
+        </a>
+      </h1>
+    </header>
     <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
 //メインビジュアル
 //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
@@ -170,8 +167,11 @@
             <span class="mv-sp">Kyushu Club Youth</span><br />Football
             Federation
           </h2>
-          <div class="sample-img">
-            <img src="../img/4192162_m.png" alt="" />
+          <div class="mv-img is-pc">
+            <img class="" src="../img/4192162_m.png" alt="" />
+          </div>
+          <div class="mv-img is-sp">
+            <img class="" src="../img/4192162_sp.png" alt="" />
           </div>
           <figure class="twitter-news"></figure>
         </div>
@@ -183,7 +183,7 @@
       <section class="top-news">
         <div class="top-news-inner inner">
           <div class="top-ttl-wrapper">
-            <h3 class="top-news-ttl">NEWS<span>お知らせ</span></h3>
+            <h3 class="top-news-ttl">NEWS<span class="is-pc">お知らせ</span></h3>
           </div>
           <ul class="top-news-list">
             <li class="top-news-item">
@@ -244,41 +244,191 @@
             </li>
           </ul>
           <a href="">
-            <div class="btn-soccer">お知らせ一覧</div>
+            <div class="btn-soccer news-button">お知らせ一覧</div>
           </a>
         </div>
       </section>
-<!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+      <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
 //TOURNAMENT
 //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
-<section class="top-tournament">
-  <div class="top-tournament-inner inner">
-    <div class="top-ttl-wrapper-tournament">
-      <h3 class="top-tornament-ttl">TOURNAMENT<span>大会情報</span></h3>
-    </div>
-    <div class="tournament-container">
-      <div class="img_container">
-        <img src="./img/u-18h.png">
-        <img src="./img/u-18.png">
-      </div>
-      <a><img src="./img/u-18.png" alt=""></a>
-      <a><img src="./img/u-15.png" alt=""></a>
-      <a><img src="./img/dev.png" alt=""></a>
-      <a><img src="./img/u-13.png" alt=""></a>
-      <a><img src="./img/u-18town.png" alt=""></a>
-      <a><img src="./img/u-17.png" alt=""></a>
-      <a><img src="./img/u-14.png" alt=""></a>
-      <a><img src="./img/training.png" alt=""></a>
-    </div>
-    <a href="">
-      <div class="btn-soccer tournament-button">大会情報一覧</div>
-    </a>
-  </div>
-</section>
+      <section class="top-tournament">
+        <div class="top-tournament-inner inner wow fadeInUp">
+          <div class="top-ttl-wrapper-tournament">
+            <h3 class="top-tornament-ttl">TOURNAMENT<span>大会情報</span></h3>
+          </div>
+          <div class="tournament-container">
+            <a href="" class="tm-Btn tm-btn-u18">
+              <span class="tm-Btn-Text1">九州クラブユース</span>
+              <span class="tm-Btn-Text2">U-18</span>
+              <span class="tm-Btn-Text3">選手権</span>
+            </a>
+            <a href="" class="tm-Btn tm-btn-u15">
+              <span class="tm-Btn-Text1">九州クラブユース</span>
+              <span class="tm-Btn-Text2">U-15</span>
+              <span class="tm-Btn-Text3">選手権</span>
+            </a>
+            <a href="" class="tm-Btn tm-btn-dev">
+              <span class="tm-Btn-Text1">九州クラブユース</span>
+              <span class="tm-Btn-Text2">デベロップ</span>
+              <span class="tm-Btn-Text3">大会</span>
+            </a>
+            <a href="" class="tm-Btn tm-btn-u13">
+              <span class="tm-Btn-Text1">九州クラブユース</span>
+              <span class="tm-Btn-Text2">U-13</span>
+              <span class="tm-Btn-Text3">大会</span>
+            </a>
+            <a href="" class="tm-Btn tm-btn-u18t">
+              <span class="tm-Btn-Text1">九州クラブユース</span>
+              <span class="tm-Btn-Text2">U-18</span>
+              <span class="tm-Btn-Text3">TownClubCUP</span>
+            </a>
+            <a href="" class="tm-Btn tm-btn-u17">
+              <span class="tm-Btn-Text1">九州クラブユース</span>
+              <span class="tm-Btn-Text2">U-17</span>
+              <span class="tm-Btn-Text3">大会</span>
+            </a>
+            <a href="" class="tm-Btn tm-btn-u14">
+              <span class="tm-Btn-Text1">九州クラブユース</span>
+              <span class="tm-Btn-Text2">U-14</span>
+              <span class="tm-Btn-Text3">大会</span>
+            </a>
+            <a href="" class="tm-Btn tm-btn-training">
+              <span class="tm-Btn-Text1">研修会・講習会</span>
+            </a>
+          </div>
+          <a href="">
+            <div class="btn-soccer tournament-button">大会情報一覧</div>
+          </a>
+        </div>
+      </section>
 
-<!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
-//スクロールトップ
+      <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+//ABOUT & TEAM
 //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
+      <section class="top-introduction">
+        <div class="top-about inner wow fadeInLeft">
+          <figure class="top-about-img">
+            <img src="/img/top-about.png" alt="" />
+          </figure>
+          <div class="top-about-right">
+            <h3 class="top-about-ttl">ABOUT</h3>
+            <p class="top-about-subttl">九州クラブユースサッカー連盟とは</p>
+            <p class="top-about-text">
+              九州内のU-18（高校生年齢）とU-15（中学生年齢）
+              のクラブチームを構成メンバーとした任意団体です。クラブチームの普及と育成に取り組んでいます。
+            </p>
+            <a href="">
+              <div class="btn-soccer top-about-button">連盟について</div>
+            </a>
+          </div>
+        </div>
+        <div class="top-team inner wow fadeInRight">
+          <div class="top-team-l">
+            <h3 class="top-team-ttl">TEAM</h3>
+            <p class="top-team-subttl">加盟チーム</p>
+            <a href="">
+              <div class="btn-soccer tournament-button">受賞クラブ紹介</div>
+            </a>
+          </div>
+          <div class="top-team-r">
+            <a class="top-team-r1 top-team-block">FUKUOKA<span>福岡県</span></a>
+            <a class="top-team-r2 top-team-block">SAGA<span>佐賀県</span></a>
+            <a class="top-team-r3 top-team-block"
+              >NAGASAKI<span>長崎県</span></a
+            >
+            <a class="top-team-r4 top-team-block"
+              >KUMAMOTO<span>熊本県</span></a
+            >
+            <a class="top-team-r5 top-team-block">OITA<span>大分県</span></a>
+            <a class="top-team-r6 top-team-block"
+              >MIYAZAKI<span>宮崎県</span></a
+            >
+            <a class="top-team-r7 top-team-block"
+              >KAGOSHIMA<span>鹿児島県</span></a
+            >
+            <a class="top-team-r8 top-team-block">OKINAWA<span>沖縄県</span></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
+      <!-- //フッター -->
+      <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
+      <section class="footer">
+        <div class="footer-inner inner">
+          <div class="footer-left">
+            <div class="footer-left-ttl">九州クラブユースサッカー連盟</div>
+            <figure class="footer-left-logo">
+              <a href=""><img src="./img/footer-logo.png" alt="" /></a>
+            </figure>
+            <figure class="footer-left-link-jfa">
+              <a href=""><img src="./img/banner_kyfa.png" alt="" /></a>
+            </figure>
+            <p class="footer-left-arr">
+              © Kyushu Club Youth Football Federation.All Rights Reserved.
+            </p>
+          </div>
+          <div class="footer-center">
+            <div class="footer-center-top">
+              <ul class="footer-center-top-l">
+                <li class="">
+                  <a class="footer-center-top-link" href="">HOME</a>
+                </li>
+                <li class="">
+                  <a class="footer-center-top-link" href="">連盟概要</a>
+                </li>
+                <li class="">
+                  <a class="footer-center-top-link" href="">加盟チーム</a>
+                </li>
+                <li class="">
+                  <a class="footer-center-top-link" href="">大会情報</a>
+                </li>
+                <li class="">
+                  <a class="footer-center-top-link" href="">加盟登録</a>
+                </li>
+              </ul>
+              <ul class="footer-center-top-r">
+                <li class="">
+                  <a class="footer-center-top-link" href="">お問い合わせ</a>
+                </li>
+                <li class="">
+                  <a class="footer-center-top-link" href=""
+                    >プライバシーポリシー</a
+                  >
+                </li>
+                <li class="">
+                  <a class="footer-center-top-link" href="">サイトポリシー</a>
+                </li>
+              </ul>
+            </div>
+            <ul class="footer-center-bottom">
+              <li class="">
+                <a class="footer-center-top-link" href=""
+                  >一般社団法人 九州サッカー協会</a
+                >
+              </li>
+              <li class="">
+                <a class="footer-center-top-link" href="">関連リンク</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-right">
+            <a
+              class="twitter-timeline"
+              data-width="250"
+              data-height="400"
+              data-theme="light"
+              href="https://twitter.com/JFA?ref_src=twsrc%5Etfw"
+              >Tweets by JFA</a
+            >
+            <script
+              async
+              src="https://platform.twitter.com/widgets.js"
+              charset="utf-8"
+            ></script>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- swipeｒ -->
