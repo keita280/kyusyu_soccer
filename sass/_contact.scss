@@ -1,0 +1,298 @@
+@use "cmn";
+
+/*========================
+セクションタイトル
+========================*/
+.contact-ttl {
+  background: url(../img/conact-pc.png) no-repeat center center / cover;
+} 
+
+
+/*========================
+レウアウト
+========================*/
+.contact-inner {
+  padding: 76px 0 140px 0;
+  padding: 23px 0 80px 0;
+}
+
+.contact-attention {
+  width: 100%;
+  margin: auto;
+  display: block;
+  max-width: 1000px;
+  margin-bottom: 36px;
+  line-height: 1.75;
+  @include cmn.mq('sp'){
+    padding: 0 26px;
+  }
+}
+
+
+
+
+/* 共通 ------------------------------*/
+*[class*="cp-"],
+*[class*="cp-"] * {
+    box-sizing: border-box;
+}
+
+.form-container {
+
+}
+
+/* セクション */
+
+
+/* コンテナー */
+.cp-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 72px 86px 76px 86px;
+  background-color: #F0F0F0;
+  @include cmn.mq('md'){
+    border-radius: 10px;
+  }
+  @include cmn.mq('sp'){
+    padding: 26px 23px 43px 23px;
+  }
+}
+.cp-container-small {
+    // max-width: 750px;
+}
+
+/* テキスト */
+.cp-text-center {
+    text-align: center;
+}
+
+/* ラベル */
+.cp-label {
+  margin-left: 15px;
+    border-radius: 3px;
+    color: #E20606;
+}
+
+
+/* フォームリセット テキスト */
+.cp-riset-text {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 10px;
+    height: 55px;
+    border: none;
+    @include cmn.mq('sp'){
+      height: 45px;
+    }
+    // appearance: none;
+}
+
+
+/* フォームリセット テキストエリア */
+.cp-riset-textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    resize: vertical;
+    // appearance: none;
+}
+
+
+/* フォームリセット チェックボックス */
+.cp-riset-check {
+    display: none;
+}
+.cp-riset-check + span {
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 24px;
+    cursor: pointer;
+}
+.cp-riset-check + span:before {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+    border: 1px solid #111;
+    background: #fff;
+}
+.cp-riset-check + span:after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 13px;
+    left: 4px;
+    transform: translateY(-50%) rotate(-45deg);
+    height: 6px;
+    width: 12px;
+    border-bottom: 2px solid #111111;
+    border-left: 2px solid #111111;
+    opacity: 0;
+}
+.cp-riset-check:checked + span:after {
+    opacity: 1;
+}
+
+
+/* フォームリセット ボタン */
+.cp-riset-submit {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 75px;
+    font-size: 26px;
+    line-height: 38px;
+    border-radius: 25px;
+    border: 1px solid #013FB4;
+    transition: .2s ease-in-out;
+    color: #013FB4;
+    background-color: #fff;
+    background-image: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all ease 0.5s;
+}
+
+/* ボタン */
+
+.cp-submit-primary:hover {
+    color: #fff;
+    background: #013FB4;
+}
+
+/* お問合せフォーム ------------------------------*/
+/* アイテム */
+.cp-contactForm01__item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.cp-contactForm01__item:last-child {
+    margin-bottom: 53px;
+}
+
+.cp-contactForm01__title {
+  line-height: 2.1875;
+    // margin-bottom: 12px;
+    // font-size: 16px;
+    // color: #707070;
+
+}
+
+.cp-contactForm01__description {
+    // margin-top: 8px;
+    // font-size: 14px;
+    // line-height: 1.5;
+    // color: #707070;
+}
+
+.cp-contactForm01__privacy {
+  margin-top: 13px;
+  padding: 17px 48px 32px 17px;
+  @include cmn.mq('sp'){
+    padding: 25px 17px 32px 17px;
+  }
+  background-color: #fff;
+  @include cmn.mq('md'){
+    width: 44%;
+  }
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  // margin: 0 auto;
+  // display: block;
+    // line-height: 1.5;
+    // color: #707070;
+}
+
+label:not(:first-child) {
+    // margin-left: 24px;
+}
+
+.contact-comment {
+ line-height: 1.75; 
+}
+
+.privacy {
+  margin-left: 10px;
+  line-height: 1.7;
+  @include cmn.mq('sp'){
+    margin-left: 5px;
+  }
+  border-bottom: 1px solid #000;
+  display: inline;
+}
+
+
+
+/*モーダルを開くボタン*/
+.modal-open{
+
+}
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+.modal-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0,0,0,50%);
+  padding: 40px 20px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  box-sizing: border-box;
+}
+/*モーダル本体の擬似要素の指定*/
+.modal-container:before{
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal-container.active{
+  opacity: 1;
+  visibility: visible;
+}
+/*モーダル枠の指定*/
+.modal-body{
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 75%;
+  @include cmn.mq('sp'){
+    width: 90%;
+  }
+}
+/*モーダルを閉じるボタンの指定*/
+.modal-close{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -40px;
+  left: -10px;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+/*モーダル内のコンテンツの指定*/
+.modal-content{
+  background: #fff;
+  text-align: left;
+  padding: 30px;
+}

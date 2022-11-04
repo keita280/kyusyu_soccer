@@ -1,0 +1,424 @@
+@use "cmn";
+
+/*========================
+セクションタイトル
+========================*/
+.page-ttl {
+  height: 250px;
+
+  @include cmn.mq("sp") {
+    background: url(../img/about-sp.png) no-repeat center center / cover;
+    height: 109px;
+  }
+}
+
+.about-ttl {
+  background: url(../img/about-ttl.png) no-repeat center center / cover;
+}
+
+
+
+.page-ttl-container {
+  color: #fff;
+  padding-top: 60px;
+  @include cmn.mq("sp") {
+    padding-top: 42px;
+    padding-left: 24px;
+  }
+}
+
+.page-h2-ttl {
+  font-size: 100px;
+  font-weight: 700;
+  line-height: 1.227; 
+  @include cmn.mq('md'){
+  }
+  @include cmn.mq("sp") {
+    font-size: 36px;
+  }
+}
+
+.page-h2-subttl {
+  font-size: 30px;
+  @include cmn.mq("sp") {
+    font-size: 14px;
+  }
+}
+
+/*========================
+九州連盟について
+========================*/
+
+.about-body {
+  margin-top: 50px;
+  margin-bottom: 110px;
+  @include cmn.mq("sp") {
+    margin-top: 16px;
+    margin-bottom: 60px;
+  }
+}
+
+.about-body-top {
+  display: flex;
+  @include cmn.mq("md") {
+    padding-bottom: 88px;
+  }
+  @include cmn.mq("sp") {
+    display: block;
+    border-left: 4px solid #013fb4;
+    padding-left: 21px;
+  }
+}
+
+.about-body-top-l {
+  @include cmn.mq("md") {
+    width: 50%;
+    border-right: #013fb4 5px solid;
+  }
+}
+
+.about-body-top-r {
+  @include cmn.mq("md") {
+    width: 50%;
+    padding-left: 53px;
+    line-height: 2.1875;
+  }
+  font-family: cmn.$font-ja;
+  @include cmn.mq("sp") {
+    line-height: 2;
+    font-size: 14px;
+    margin-top: 25px;
+  }
+}
+
+.about-body-ttl {
+  color: #013fb4;
+  font-size: 55px;
+  margin-bottom: 20px;
+  @include cmn.mq("sp") {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+}
+
+.about-body-subttl {
+  font-size: 24px;
+  @include cmn.mq("sp") {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.scrolldown-container {
+  text-align: center;
+  position: relative;
+}
+
+.scrolldown {
+  width: 50px;
+  height: 32.45px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*アニメーション用CSS*/
+.scrolldown {
+  /* アニメーションの名前 */
+  animation-name: scrolldown;
+  /* アニメーションの１回分の長さ */
+  animation-duration: 1.5s;
+  /* アニメーションの回数 */
+  animation-iteration-count: infinite;
+  /* アニメーションの進行具合 */
+  animation-timing-function: ease-in-out;
+  /* アニメーション再生の向き */
+  animation-direction: alternate;
+}
+/* アニメーションの設定 */
+@keyframes scrolldown {
+  /* 開始地点 */
+  0% {
+    /* Y軸0px */
+    transform: translateY(0);
+  }
+  /* 終了地点 */
+  100% {
+    /* Y軸50px */
+    transform: translateY(10px);
+  }
+}
+
+.about-scroll-txt {
+  color: #013fb4;
+  position: absolute;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.about-body-bottom {
+  display: flex;
+  margin-top: 64px;
+  @include cmn.mq('md'){
+    margin-bottom: 95px;
+  }
+  @include cmn.mq("sp") {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+.about-body-bottom-l {
+  @include cmn.mq("md") {
+    margin-right: 32px;
+    width: calc(50% - 16px);
+  }
+}
+
+
+.about-body-bottom-ttl {
+  font-size: 40px;
+  color: #013fb4;
+  line-height: 1.4;
+  @include cmn.mq("sp") {
+    font-size: 24px;
+  }
+}
+
+.about-body-bottom-container {
+  background-color: #d6e4ff;
+  padding: 23px 30px;
+  height: 240px;
+  @include cmn.mq("sp") {
+    padding: 15px 18px;
+    height: 200px;
+  }
+}
+
+.about-body-bottom-subttl {
+  font-size: 24px;
+  margin-bottom: 31px;
+  color: #013fb4;
+  @include cmn.mq("sp") {
+    font-size: 16px;
+    margin-bottom: 13px;
+  }
+}
+
+.about-body-contact {
+  display: inline-block;
+  color: #013fb4;
+  border-bottom: 1px solid #013fb4;
+  @include cmn.mq("md") {
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  @include cmn.mq("sp") {
+    margin-top: 20px;
+  }
+}
+.about-body-bottom-l-txt {
+  display: flex;
+  font-size: 18px;
+  line-height: 1.75;
+  font-family: cmn.$font-ja;
+
+  @include cmn.mq("md") {
+    margin-left: 10px;
+  }
+  @include cmn.mq("sp") {
+    display: block;
+    font-size: 14px;
+  }
+}
+
+.about-body-bottom-l-phone {
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+}
+
+.about-body-bottom-r {
+  @include cmn.mq("md") {
+    width: calc(50% - 16px);
+  }
+  @include cmn.mq('sp'){
+    margin-top: 19px;
+  }
+}
+
+.about-body-bottom-r {
+}
+
+.about-body-bottom-r-subttl {
+}
+
+.about-body-bottom-r-txt {
+  font-size: 18px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 15px;
+  line-height: 1.75;
+  background-image: linear-gradient(
+    to right,
+    #013fb4,
+    #013fb4 2px,
+    transparent 5px,
+    transparent 8px
+  ); /* 幅2の線を作る */
+  background-size: 8px 1px; /* グラデーションの幅・高さを指定 */
+  background-position: left bottom; /* 背景の開始位置を指定 */
+  background-repeat: repeat-x; /* 横向きにのみ繰り返す */
+  position: relative;
+  & + & {
+    margin-top: 30px;
+  }
+  &::after {
+    position: absolute;
+    background: url(../img/download.png) no-repeat center center / contain;
+    content: "";
+    width: 30px;
+    height: 30px;
+    @include cmn.mq('sp'){
+      width: 20px;
+      height: 20px;
+    }
+    right: 10px;
+    bottom: 15px;
+  }
+  @include cmn.mq('sp'){
+    font-size: 14px;
+    padding-bottom: 9px;
+  }
+}
+
+.adress-num {
+  display: block;
+  width: 120px;
+}
+
+.adress {
+  display: block;
+  @include cmn.mq("md") {
+    width: 78%;
+  }
+}
+
+/*========================
+連盟の成り立ちと歴史
+========================*/
+
+.his {
+  background-color: #d6e4ff;
+  padding: 87px 106px;
+  @include cmn.mq('sp'){
+    padding: 20px 0 51px 0;
+  }
+}
+
+.his-inner {
+}
+
+.his-ttl {
+  font-size: 40px;
+  color: #013fb4;
+  line-height: 1.525;
+  margin-bottom: 11px;
+  @include cmn.mq('sp'){
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+}
+
+.his-subttl {
+  font-size: 24px;
+  color: #013fb4;
+  margin-bottom: 70px;
+  @include cmn.mq('sp'){
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+
+
+// 連盟の成り立ち
+.development {
+  display: flex;
+  margin-bottom: 85px;
+  @include cmn.mq('sp'){
+    display: block;
+    margin-bottom: 50px;
+  }
+}
+
+.development-ttl {
+  display: block;
+  width: 330px;
+  font-size: 24px;
+  padding-right: 44px;
+  line-height: 1.4583;
+  @include cmn.mq('md'){
+    border-right: #013fb4 2px solid;
+  }
+  @include cmn.mq('sp'){
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: #013fb4 1px solid;
+  }
+}
+
+.development-text {
+  display: block;
+  @include cmn.mq('md'){
+    width: calc(100% - 330px);
+    margin-left: 44px;
+  }
+  line-height: 2.1875;
+  @include cmn.mq('sp'){
+    line-height: 2;
+    font-size: 14px;
+  }
+}
+
+
+// 歴史
+.history {
+  display: flex;
+  @include cmn.mq('sp'){
+    display: block;
+    // margin-bottom: 40px;
+  }
+}
+
+.history-ttl {
+  display: block;
+  width: 330px;
+  font-size: 24px;
+  padding-right: 44px;
+  line-height: 1.4583;
+  @include cmn.mq('md'){
+    border-right: #013fb4 2px solid;
+  }
+  @include cmn.mq('sp'){
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: #013fb4 1px solid;
+  }
+}
+
+.history-text {
+  display: block;
+  line-height: 2.1875;
+  @include cmn.mq('md'){
+    margin-left: 44px;
+    width: calc(100% - 330px);
+  }
+  @include cmn.mq('sp'){
+    line-height: 2;
+    font-size: 14px;
+  }
+}
+
+
+.org-subttl {
+  margin-bottom: 35px;
+}

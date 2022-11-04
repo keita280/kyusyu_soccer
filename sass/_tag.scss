@@ -1,0 +1,59 @@
+@use "cmn";
+
+/*========================
+セクションタイトル
+========================*/
+.u18-page-head {
+  color: #00a8db;
+}
+
+/*========================
+サイドバー
+========================*/
+
+/*========================
+記事一覧
+========================*/
+
+.cmn-news-bg-u18 {
+  background-color: #e5f6fb;
+  background: url(../img/tag-bg.png) no-repeat center top 15px / contain;
+  @include cmn.mq("md") {
+    background: url(../img/tag-bg.png) no-repeat center top 60px / cover;
+  }
+}
+
+.u18-page-head {
+  font-size: 32px;
+  padding: 10px 0px;
+  line-height: 1.5;
+  font-weight: 700;
+  @include cmn.mq("md") {
+    font-size: 70px;
+  }
+}
+
+.tag-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  @include cmn.mq("sp") {
+    // padding: 0 20px;
+  }
+}
+
+.tag-news-list {
+  @include cmn.mq('sp'){
+    padding: 0 20px;
+    background:  #e5f6fb url(../img/tag-bg.png) no-repeat center top 15px / cover;
+  }
+}
+
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+// news-SP
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+
+.tag-u18bg {
+  @include cmn.mq("md") {
+    background-color: #e5f6fb;
+  }
+}

@@ -8,10 +8,9 @@
   padding: 18px 20px 18px 12px;
 }
 
-.h1-pc{
+.h1-pc {
   width: 68.98%;
 }
-
 
 #toggle {
   position: fixed;
@@ -25,8 +24,7 @@
   cursor: pointer;
 }
 
-
-.humberger> p {
+.humberger > p {
   position: absolute;
   bottom: 0;
   font-size: 11px;
@@ -55,12 +53,9 @@
   transform: translatey(-50%);
 }
 
-
 .is-open .humberger-text {
   color: #fff;
 }
-
-
 
 .is-open #toggle-box > span {
   background: #fff;
@@ -119,8 +114,6 @@
 #nav-content li:hover {
   background-color: #000;
 }
-
-
 
 .nav-content-link {
   padding: 18px 0;
@@ -239,7 +232,6 @@
   text-align: center;
 }
 
-
 .mv-img {
   height: auto;
   max-width: 100%;
@@ -255,7 +247,7 @@
   top: 33%;
   transform: translate(-50%, -50%);
   letter-spacing: 0.05em;
-  @include cmn.mq('sp'){
+  @include cmn.mq("sp") {
     font-size: 2em;
   }
 }
@@ -267,6 +259,7 @@
 .twitter-news {
   background: url(../img/twitter-news.png) no-repeat center center / cover;
   position: fixed;
+  z-index: 999;
   width: 123px;
   height: 123px;
   bottom: 3%;
@@ -296,8 +289,14 @@
     // width: 100%;
     height: 530.18px;
   }
-  @include cmn.mq('sp'){
-    margin-top: -18px;
+  @include cmn.mq("sp") {
+    background: url(../img/top-news-bg.png) no-repeat center center / cover;
+    margin-top: -70px;
+    padding-top: 60px;
+    padding-bottom: 55px;
+    &::after {
+      background: none;
+    }
   }
 }
 
@@ -308,7 +307,7 @@
 .top-ttl-wrapper {
   text-align: center;
   margin-bottom: 45px;
-  @include cmn.mq('sp'){
+  @include cmn.mq("sp") {
     margin-bottom: 24px;
   }
 }
@@ -317,20 +316,23 @@
   font-size: 45px;
   color: cmn.$color-blue;
   > span {
+    margin-top: 10px;
     display: block;
     color: #000000;
     font-size: 16px;
-    @include cmn.mq('sp'){
+    @include cmn.mq("sp") {
       display: none;
     }
   }
-  @include cmn.mq('sp'){
+  @include cmn.mq("sp") {
     font-size: 24px;
   }
 }
 
 .top-news-list {
-  padding: 0 30px;
+  @include cmn.mq('md'){
+    padding: 0 30px;
+  }
   margin-bottom: 48.5px;
   > .top-news-item {
     a {
@@ -341,6 +343,9 @@
       text-decoration: none;
       color: #333;
       padding: 20px 20px;
+      @include cmn.mq("sp") {
+        padding: 20px 3px;
+      }
       background-image: linear-gradient(
         to right,
         #000,
@@ -364,8 +369,8 @@
       }
     }
   }
-  @include cmn.mq('sp'){
-    padding: 0 25px;
+  @include cmn.mq("sp") {
+    // padding: 0 25px;
   }
 }
 
@@ -374,18 +379,20 @@
 }
 
 .top-news-cat-info {
-  > span {
-    height: 24px;
-    border-radius: 5px 0px;
-    background: cmn.$color-blue;
-    color: #fff;
-    text-align: center;
-    display: inline-block;
-    padding: 5px 20px;
-    font-size: 15px;
-    line-height: 1;
+  height: 24px;
+  border-radius: 5px 0px;
+  background: cmn.$color-blue;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 15px;
+  line-height: 1;
+  @include cmn.mq("sp") {
+    margin-right: 15px;
   }
 }
+
 .top-news-cat-register {
   > span {
     height: 24px;
@@ -417,13 +424,20 @@
 
 .top-news-date {
   color: #e20606;
-  line-height: 35px;
-  transform: translateY(-14px);
+  @include cmn.mq("md") {
+    line-height: 35px;
+    transform: translateY(-14px);
+  }
+  @include cmn.mq("sp") {
+    display: block;
+  }
 }
 
 .top-news-name {
   padding-right: 30px;
-  transform: translateY(-14px);
+  @include cmn.mq("md") {
+    transform: translateY(-14px);
+  }
 }
 
 .top-news-post {
@@ -431,8 +445,10 @@
 }
 
 .top-news-article {
-  display: flex;
-  align-items: center;
+  @include cmn.mq("md") {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .arrow-wrapper {
@@ -489,6 +505,9 @@
   line-height: 50px;
   position: relative;
   transition: 0.5s all;
+  @include cmn.mq("sp") {
+    width: 250px;
+  }
   &::before {
     position: absolute;
     content: "";
@@ -514,26 +533,57 @@
 }
 
 //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+// news-SP
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
+.sp-top-news-top {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sp-top-news-bottom {
+  display: flex;
+  align-items: center;
+}
+
+//＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
 // tournament
 //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
 .top-tournament {
   background: url(../img/top-tounament-bg.png) no-repeat center center / cover;
   padding: 57px 40px 102.15px 40px;
+  @include cmn.mq("sp") {
+    background: url(../img/1_timothy-tan-PAe2UhGo-S4-unsplash.png) no-repeat
+      center center / cover;
+    padding: 40px 20px;
+  }
 }
 
 .top-ttl-wrapper-tournament {
   text-align: center;
   margin-bottom: 70px;
+  @include cmn.mq("sp") {
+    display: flex;
+    margin-bottom: 37px;
+  }
 }
 
 .top-tornament-ttl {
   font-size: 45px;
   color: #ffff;
+  @include cmn.mq("sp") {
+    font-size: 30px;
+    margin-right: 13px;
+  }
+}
 
-  > span {
-    display: block;
-    color: #ffff;
-    font-size: 16px;
+.top-tornament-subttl {
+  margin-top: 10px;
+  display: block;
+  color: #ffff;
+  font-size: 16px;
+  @include cmn.mq("sp") {
+    font-size: 15px;
   }
 }
 
@@ -547,6 +597,15 @@
   row-gap: 40px;
   justify-content: center;
   margin-bottom: 93.85px;
+  @include cmn.mq("sp") {
+    /* 最小100px、最大1frの列を繰り返しつくる */
+    grid-template-columns: repeat(2, 160px);
+    /* 余白 */
+    column-gap: 20px;
+    row-gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .tournament-button {
@@ -588,6 +647,10 @@ img:nth-child(2) {
   flex-direction: column;
   transition: initial;
   overflow: hidden;
+  @include cmn.mq("sp") {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .tm-btn-u18 {
@@ -676,16 +739,27 @@ img:nth-child(2) {
 
 .tm-Btn:hover:before {
   transform: scale(4.2);
+  @include cmn.mq("sp") {
+    transform: scale(3.4);
+  }
 }
 
 //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
-// introduction
+//ABOUT & TEAM
 //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
 
+//＠＠＠＠＠＠＠＠＠＠
+// introduction
+//＠＠＠＠＠＠＠＠＠＠
+
 .top-introduction {
-  padding: 180.85px 40px;
-  background: url(../img/top-introduction-bg.png) no-repeat center center /
-    cover;
+  @include cmn.mq("md") {
+    padding: 180.85px 40px;
+  }
+  background: url(../img/top-introduction-bg.png) no-repeat center center / cover;
+  @include cmn.mq("sp") {
+    background: none;
+  }
 }
 
 // @@@@@@@@@
@@ -694,7 +768,15 @@ img:nth-child(2) {
 
 .top-about {
   display: flex;
-  margin-bottom: 160px;
+  @include cmn.mq('md'){
+    margin-bottom: 160px;
+  }
+  @include cmn.mq("sp") {
+    display: block;
+    padding: 40px 24px 55px 24px;
+    background: url(../img/sp-about-bg.png) no-repeat center center / cover;
+    background-position-y: 38px;
+  }
 }
 
 .top-about-img {
@@ -711,16 +793,32 @@ img:nth-child(2) {
   color: #013fb4;
   margin-bottom: 20px;
   font-weight: 700;
+  @include cmn.mq('sp'){
+    font-size: 36px;
+  }
 }
 
 .top-about-subttl {
   font-size: 20px;
   margin-bottom: 20px;
+  @include cmn.mq("sp") {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
 }
 
 .top-about-text {
   margin-bottom: 89.5px;
   line-height: 30px;
+  @include cmn.mq("sp") {
+    margin-bottom: 40px;
+  }
+}
+
+.top-about-button {
+  @include cmn.mq('sp'){
+    margin: 0 auto;
+  }
 }
 
 .tournament-button {
@@ -733,6 +831,20 @@ img:nth-child(2) {
 
 .top-team {
   display: flex;
+  @include cmn.mq('sp'){
+    padding: 27px 24px 43px 24px;
+    display: block;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background: url(../img/sp-top-vlob.png) no-repeat center center / contain;
+      width: 67.43px;
+      height: 108.44px;
+      bottom: 98px;
+      right: 40px;
+    }
+  }
 }
 
 .top-team-l {
@@ -749,9 +861,19 @@ img:nth-child(2) {
   line-height: 30px;
   padding: 15px 10px;
   transition: all 0.3s;
+  @include cmn.mq('sp'){
+    width: 100px;
+    height: 65px;
+    font-size: 18px;
+    padding: 8px 4px;
+  }
   > span {
     display: block;
     font-size: 18px;
+    @include cmn.mq('sp'){
+      font-size: 14px;
+      line-height: 1;
+    }
   }
   &:hover {
     background-color: #000;
@@ -774,7 +896,35 @@ img:nth-child(2) {
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 25px;
   grid-row-gap: 26px;
+  @include cmn.mq('sp'){
+    grid-column-gap: 13px;
+    grid-row-gap: 13px;
+    margin: 0 auto;
+    margin-bottom: 45px;
+  }
 }
+
+
+.sp-top-team-header {
+  background: url(../img/sp-about-img.png) no-repeat center center / cover;
+  width: 100%;
+  height: 110px;
+  padding: 21px 24px;
+}
+
+.sp-team-ttl {
+  font-size: 36px;
+  color: #fff;
+  margin-bottom: 5px;
+
+}
+
+.sp-team-subttl {
+  font-size: 18px;
+  color: #fff;
+
+}
+
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
@@ -807,20 +957,33 @@ img:nth-child(2) {
 .footer {
   padding: 84.33px 53px;
   background-color: #013fb4;
+  @include cmn.mq('sp'){
+    padding: 60px 0 40px 0;
+  }
 }
 
 .footer-inner {
   display: flex;
   justify-content: space-between;
+  @include cmn.mq('sp'){
+    display: block;
+  }
 }
 
 .footer-left {
+  @include cmn.mq('sp'){
+    text-align: center;
+  }
 }
 
 .footer-left-ttl {
   font-size: 24px;
   color: #f7d239;
   margin-bottom: 40px;
+  @include cmn.mq('sp'){
+    color: #fff;
+    margin-bottom: 20px;
+  }
 }
 
 .footer-left-logo {
@@ -830,6 +993,12 @@ img:nth-child(2) {
   transition: all 0.3s;
   &:hover {
     opacity: 0.7;
+  }
+  @include cmn.mq('sp'){
+    width: 320.5px;
+    height: 77px;
+    margin-bottom: 23.69px;
+    margin: 0 auto;
   }
 }
 
@@ -844,16 +1013,37 @@ img:nth-child(2) {
   }
 }
 
+.footer-left-link-jfa-sp {
+  width: 124px;
+  height: 83px;
+  margin-top: 34px;
+  margin-bottom: 34px;
+  font-size: 13px;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.7;
+  }
+  @include cmn.mq('sp'){
+    margin: 0 auto;
+  }
+}
+
 .footer-left-arr {
   color: #fff;
 }
 
 .footer-center {
+  @include cmn.mq('sp'){
+    text-align: center;
+  }
 }
 
 .footer-center-top {
   display: flex;
   margin-bottom: 30px;
+  @include cmn.mq('sp'){
+    justify-content: center;
+  }
 }
 
 .footer-center-top-l {
@@ -865,10 +1055,14 @@ img:nth-child(2) {
 }
 
 .footer-center-top-link {
+  display: inline-block;
   transition: all 0.3s;
   position: relative;
   &:hover {
     color: #f7d239;
+  }
+  @include cmn.mq('sp'){
+    font-size: 14px;
   }
 }
 
@@ -903,8 +1097,40 @@ img:nth-child(2) {
   }
 }
 
+.link-assosiation {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    background: url(../img/new-window.png) no-repeat center center / cover;
+    width: 15px;
+    height: 15px;
+    right: -25px;
+    top: 5px;
+  }
+}
+
 .footer-right {
 }
 
 .twitter-timeline {
 }
+
+
+.sp-twitter-link {
+  width: 25px;
+  height: 25px;
+  margin-top: 36px;
+}
+
+.footer-bottom {
+  background-color: #fff;
+  padding: 6px 23px 57px 23px;
+  text-align: center;
+  > p {
+    color: #013FB4;
+    font-size: 13px;
+  }
+}
+

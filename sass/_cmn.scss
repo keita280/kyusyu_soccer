@@ -109,6 +109,9 @@ body {
 .inner {
   max-width: 1080px;
   margin: 0 auto;
+  @include mq('sp'){
+    padding: 0 20px;
+  }
 }
 
 img {
@@ -140,4 +143,64 @@ main {
   overflow: hidden;
 }
 
+.opacity {
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 0.5;
+  }
+}
 
+
+// ＠＠＠＠＠＠＠＠＠
+// パンくずリスト
+// ＠＠＠＠＠＠＠＠
+/* 共通 ------------------------------*/
+*[class*="cp-"],
+*[class*="cp-"] * {
+  box-sizing: border-box;
+}
+
+/* パンくずリスト ------------------------------*/
+.cp-breadcrumb01 {
+  padding: 3px 20px 3px 20px;
+  font-size: 15px;
+  list-style: none;
+  @include mq('md'){
+    margin-top: 20px;
+  }
+  @include mq('sp'){
+    background-color: #D6E4FF;
+  }
+}
+
+/* アイテム */
+.cp-breadcrumb01__item {
+  display: inline;
+  position: relative;
+  line-height: 1.5;
+  color: #333;
+  font-weight: bold;
+
+}
+.cp-breadcrumb01__item:not(:first-child) {
+  margin-left: 24px;
+}
+.cp-breadcrumb01__item:not(:last-child):after {
+  position: absolute;
+  content: "\f054";
+  top: 50%;
+  right: -16px;
+  transform: translateY(-50%);
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  color: #707070;
+}
+.cp-breadcrumb01__item a {
+  transition: 0.2s ease-in-out;
+  color: #707070;
+  text-decoration: none;
+  font-weight: normal;
+}
+.cp-breadcrumb01__item a:hover {
+  opacity: 0.7;
+}

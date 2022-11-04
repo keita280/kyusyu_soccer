@@ -1,0 +1,140 @@
+@use "cmn";
+
+
+/*========================
+　　スマホボトムナビゲーション
+　========================*/
+
+.mini-text {
+  font-size: 13px;
+} /*文字大きさ*/
+
+ul.bottom-menu {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 45px; /*高さ*/
+  margin: 0;
+  padding: 0;
+  background-color: #013FB4; /*背景色*/
+  z-index: 800;
+  display: flex;
+}
+
+ul.bottom-menu li {
+  background-color: #013FB4; /*背景色*/
+  text-align: center;
+
+  &:not(:last-child) {
+    border-right: #fff solid 1px;
+  }
+}
+
+.sp-nav-li1 {
+  width: 25%;
+  line-height: 2.8125;
+  // ホバー時の挙動
+  &:hover {
+    background-color: #FCE484;
+    > a {
+      color: #013FB4;
+    }
+  }
+}
+
+.sp-nav-li2 {
+  width: 25%;
+  line-height: 2.8125;
+  // ホバー時の挙動
+  &:hover {
+    background-color: #FCE484;
+    > a {
+      color: #013FB4;
+    }
+  }
+}
+
+.sp-nav-li3 {
+  width: calc(50% - 45px);
+  padding-left: 6px;
+  padding-right: 25px;
+  line-height: 2.8125;
+  // ホバー時の挙動
+  &:hover {
+    background-color: #F7D239;
+    > a {
+      color: #013FB4;
+      > .bottom-menu-twitter
+      > .footer-nav-yellow {
+        color: #000000;
+      }
+      > .bottom-menu-twitter {
+        &::after {
+          position: absolute;
+          content: "";
+          background: url(../img/sp-nav-twitter-blk.png) no-repeat center center / contain;
+          width: 20px;
+          height: 20px;
+          top: 8px;
+          right: -23px;
+        }
+      }
+    }
+  }
+}
+
+.sp-nav-li4 {
+  width: 45px;
+  padding-top: 6px;
+    // ホバー時の挙動
+    &:hover {
+      background-color: #fff;
+      > a {
+        color: #013FB4;
+      }
+    }
+}
+
+.bottom-menu li a {
+  display: block;
+  color: #fff; /*アイコン＆文字の色*/
+  padding-bottom: 5px;
+  text-decoration: none;
+  &:not(:last-child) {
+    line-height: 2.5;
+  }
+}
+
+
+
+
+
+.bottom-menu-twitter {
+  position: relative;
+  display: inline-block;
+  &::after {
+    position: absolute;
+    content: "";
+    background: url(../img/sp-nav-twitter.png) no-repeat center center / contain;
+    width: 20px;
+    height: 20px;
+    top: 8px;
+    right: -23px;
+  }
+}
+
+.footer-nav-yellow {
+  color: #F7D239;
+}
+
+.dli-chevron-up {
+  display: inline-block;
+  color: #fff;
+  width: 10px;
+  height: 10px;
+  border: 3px solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  transform: translateY(25%) rotate(-45deg);
+}
