@@ -1,0 +1,40 @@
+@use "cmn";
+
+
+
+.bg404 {
+  background-color: #D8E4FD;
+  text-align: center;
+  padding: 80px 40px 120px 40px;
+}
+.body404 {
+  background-color: #D8E4FD;
+}
+
+.ttl404 {
+  font-size: 120px;
+  @include cmn.mq('sp'){
+    font-size: 80px;
+  }
+  color: #013FB4;
+}
+
+.notfound {
+display: block;
+font-size: 50px;
+margin-bottom: 10px;
+@include cmn.mq('sp'){
+  font-size: 25px;
+}
+}
+
+.txt404 {
+line-height: 1.75;
+margin-bottom: 42px;
+}
+
+.cp-text-center {
+
+}
+
+

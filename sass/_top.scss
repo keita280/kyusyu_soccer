@@ -996,6 +996,8 @@ img:nth-child(2) {
   }
   @include cmn.mq('sp'){
     width: 320.5px;
+    width: 100%;
+    max-width: 352px;
     height: 77px;
     margin-bottom: 23.69px;
     margin: 0 auto;

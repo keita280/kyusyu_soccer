@@ -147,6 +147,7 @@
 /* フォームリセット ボタン */
 .cp-riset-submit {
     display: inline-block;
+    max-width: 100%;
     margin: 0;
     padding: 6px 75px;
     font-size: 26px;
@@ -160,6 +161,10 @@
     cursor: pointer;
     text-decoration: none;
     transition: all ease 0.5s;
+    @include cmn.mq('sp'){
+      font-size: 16px;
+      padding: 3px 40px;
+    }
 }
 
 /* ボタン */

@@ -1,0 +1,138 @@
+@use "cmn";
+
+.single-bg {
+  padding: 0 40px 140px 40px;
+  background-color: #D8E4FD;
+  @include cmn.mq('sp'){
+    padding: 0;
+  }
+}
+
+.single-h2ttl {
+color: #FFFFFF;
+font-size: 100px;
+margin-top: 50px;
+margin-bottom: 30px;
+@include cmn.mq('sp'){
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+}
+
+.single-wrapper {
+  display: flex;
+@include cmn.mq('sp'){
+  display: block;
+}
+}
+
+.single-container {
+  background-color: #fff;
+  margin-right: 64px;
+  padding: 30px 30px 60px 30px;
+  @include cmn.mq('sp'){
+    margin-right: 0;
+    padding: 15px 15px 30px 15px;
+    margin-bottom: 50px;
+  }
+}
+
+.single-aside {
+  margin-top: 0;
+  margin-right: 0;
+}
+
+.single-info {
+}
+
+.single-h1 {
+color: #013FB4;
+font-size: 36px;
+margin-top: 21px;
+margin-bottom: 28px;
+@include cmn.mq('sp'){
+  font-size: 20px;
+  line-height: 1.4;
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+}
+
+.single-date-container {
+padding-bottom: 15px;
+background-image: linear-gradient(
+  to right,
+  #013fb4,
+  #013fb4 2px,
+  transparent 5px,
+  transparent 8px
+); /* 幅2の線を作る */
+background-size: 8px 1px; /* グラデーションの幅・高さを指定 */
+background-position: left bottom; /* 背景の開始位置を指定 */
+background-repeat: repeat-x; /* 横向きにのみ繰り返す */
+display: flex;
+@include cmn.mq('sp'){
+  display: block;
+}
+}
+
+.single-release {
+  margin-right: 30px;
+  
+  > span {
+    margin-left: 15px;
+    @include cmn.mq('sp'){
+      margin-left: 63px;
+    }
+  }
+}
+
+.single-update {
+  color: #E20606;
+  > span {
+    margin-left: 15px;
+  }
+}
+.single-body {
+  padding: 34px 20px 0 20px;
+  @include cmn.mq('sp'){
+    padding: 17px 10px 0 10px;
+  }
+}
+
+.single-txt {
+line-height: 1.7;
+padding-left: 10px;
+padding-right: 10px;
+@include cmn.mq('sp'){
+  padding-left: 5px;
+  padding-right: 5px;
+}
+}
+
+.single-h2 {
+  font-size: 22px;
+  background-color: #D6E4FF;
+  padding: 8px 15px 8px 15px;
+  border-left: #013FB4 4px solid;
+  @include cmn.mq('sp'){
+    font-size: 19px;
+    padding: 5px 5px 5px 5px;
+    line-height: 1.3;
+  }
+}
+.single-h3 {
+  color: #013FB4;
+  font-size: 22px;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 4px;
+  @include cmn.mq('sp'){
+    font-size: 18px;
+  }
+}
+.single-h4 {
+line-height: 1.575;
+font-weight: 700;
+}
+

@@ -206,9 +206,9 @@
       content: "";
       bottom: 50px;
       right: 50px;
-      width: 150px;
+      width: 300px;
       height: 300px;
-      background: url(../img/blob.png) no-repeat center center / contain;
+      background: url(../img/vlobs-kick.png) no-repeat center center / contain;
     }
   }
 }
@@ -348,6 +348,10 @@
   color: #fff;
   background-color: #3101B4;  
 }
+.info-cat-u13 {
+  color: #fff;
+  background-color: #C7B800;  
+}
 
 .info-cat-u-13 {
   color: #fff;
@@ -358,6 +362,34 @@
   color: #013FB4;
   background-color: #fff;
   border: #013FB4 1px solid;
+}
+
+.info-cat-training {
+  color: #013FB4;
+  background-color: #fff;
+  border: #013FB4 1px solid;
+}
+
+
+.info-cat-u18tcc {
+  color: #fff;
+  background-color:#00A8DB;
+}
+.info-cat-u17 {
+  color: #fff;
+  background-color:#C302C3;
+}
+.info-cat-dev {
+  color: #fff;
+  background-color:#049F28;
+}
+.info-cat-u14 {
+  color: #fff;
+  background-color:#DB4D01;
+}
+.info-cat-u15 {
+  color: #fff;
+  background-color:#e20606;
 }
 
 .cmn-news-cat-register {
