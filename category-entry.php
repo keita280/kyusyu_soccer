@@ -72,7 +72,7 @@ get_header(); ?>
               'category_name' => 'entry', //特定のカテゴリースラッグを指定
               'posts_per_page' => 10, //取得記事件数
             ));
-            $cat = get_the_category();
+            $cat = get_the_tags();
             $catname = $cat[0]->cat_name;
             foreach ($newslist as $post) :
               setup_postdata($post);

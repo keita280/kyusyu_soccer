@@ -1,9 +1,4 @@
-
-<?php get_header(); 
-/*
-Template Name: トップページ
-*/
-?>
+<?php get_header(); ?>
 
 
 <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
