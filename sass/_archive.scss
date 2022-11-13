@@ -318,9 +318,7 @@
 .cmn-news-cat-info {
   height: 24px;
   border-radius: 5px 0px;
-  @include cmn.mq('md'){
     min-width: 100px;
-  }
   text-align: center;
   display: inline-block;
   padding: 5px 20px;

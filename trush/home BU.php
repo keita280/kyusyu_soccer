@@ -1,12 +1,13 @@
 <?php
 /*
-Template Name: category-entryページ
+Template Name: 新着情報一覧ページ
 */
 get_header(); ?>
 <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
 <!-- //contactタイトル-->
 <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
 <main>
+
   <!-- パンくずリスト -->
   <?php if (function_exists('bcn_display')) : ?>
     <!-- breadcrumb -->
@@ -19,27 +20,31 @@ get_header(); ?>
   <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
   <!-- //一覧ページコンテンツ-->
   <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
-  <div class="cmn-article-bg  cmn-news-bg-entry">
+  <div class="cmn-article-bg  cmn-news-bg-yl">
     <div class="cmn-article-wrapper inner">
       <section class="cmn-news-list">
         <figure class="twitter-news is-pc"><a href=""></a></figure>
-        <h2 class="cmn-page-head">ENTRY<span class="cmn-page-head-subttl">加盟登録一覧</span></h2>
+        <h2 class="cmn-page-head">NEWS<span class="cmn-page-head-subttl">お知らせ一覧</span></h2>
         <div class="cmn-news-list-container">
           <!-- PCのニュース表示 -->
           <ul class="cmn-news-list is-pc">
-
-            <?php
-            $newslist = get_posts(array(
-              'paged' => get_query_var('paged'), //これを加えました
-              'category_name' => 'entry', //特定のカテゴリースラッグを指定
-              'posts_per_page' => 10, //取得記事件数
-            ));
+          <?php
+            $paged = (int) get_query_var('paged');
             $cat = get_the_category();
             $catname = $cat[0]->cat_name;
-            foreach ($newslist as $post) :
-              setup_postdata($post);
+            
+            $args = array(
+            'posts_per_page' => 6,
+            'paged' => $paged,
+            'orderby' => 'post_date',
+            'order' => 'DESC',
+            'post_type' => 'post',
+            'post_status' => 'publish'
+            );
+            $the_query = new WP_Query($args);
+            if ( $the_query->have_posts() ) :
+            while ( $the_query->have_posts() ) : $the_query->the_post();
             ?>
-
               <li class="cmn-news-item">
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
@@ -56,29 +61,24 @@ get_header(); ?>
                   </div>
                 </a>
               </li>
-
-            <?php
-            endforeach;
-            wp_reset_postdata();
-            ?>
+              <?php endwhile; endif; ?>
           </ul>
 
           <!-- SPのニュース表示 -->
           <ul class="cmn-news-list is-sp">
 
-            <?php
+          <?php
             $newslist = get_posts(array(
               'paged' => get_query_var('paged'), //これを加えました
-              'category_name' => 'entry', //特定のカテゴリースラッグを指定
+              'category_name' => 'news', //特定のカテゴリースラッグを指定
               'posts_per_page' => 10, //取得記事件数
             ));
-            $cat = get_the_tags();
+            $cat = get_the_category();
             $catname = $cat[0]->cat_name;
             foreach ($newslist as $post) :
               setup_postdata($post);
             ?>
-
-              <li class="cmn-news-item">
+            <li class="cmn-news-item">
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
                     <div class="sp-cmn-news-top">
@@ -92,7 +92,6 @@ get_header(); ?>
                       <span class="news-arrow"></span>
                     </div>
                   </div>
-                  
                 </a>
               </li>
 
@@ -103,12 +102,11 @@ get_header(); ?>
 
           </ul>
 
-
           <!-- ページネーション -->
           <ul class="Pagination">
-            <?php
+          <?php
             $args = array(
-              'mid_size' => 3,
+              'mid_size' => 1,
               'prev_text' => '<i class="fa-solid fa-arrow-left"></i>',
               'next_text' => '<i class="fa-solid fa-arrow-right"></i>',
               'screen_reader_text' => '',
@@ -117,6 +115,7 @@ get_header(); ?>
             ?>
           </ul>
           <!-- ページネーション -->
+          <?php wp_reset_postdata(); ?>
         </div>
       </section>
       <aside class="news-aside inner">
@@ -148,4 +147,5 @@ get_header(); ?>
     </div>
   </div>
 </main>
+
 <?php get_footer(); ?>
