@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: 404
+Template Name: 
 */
 get_header("white");
 ?>

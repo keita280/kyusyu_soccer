@@ -5,7 +5,7 @@
 //ハンバーガーメニューの表示
 //@@@@@@@@@@@@@@@@@@@@@@@@@
 
-$(function() {
+jQuery(function() {
   $('#toggle').on('click', function() {
     $('body').toggleClass('is-open');
     if ($('#humberger-text').text() === 'CLOSE') {

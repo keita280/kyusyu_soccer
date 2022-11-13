@@ -90,6 +90,10 @@ ul.bottom-menu li {
     // ホバー時の挙動
     &:hover {
       background-color: #fff;
+      .dli-chevron-up {
+        color: #013FB4;
+        
+      }
       > a {
         color: #013FB4;
       }

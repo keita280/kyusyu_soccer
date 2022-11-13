@@ -41,29 +41,22 @@
   justify-content: center;
   padding-bottom: 68px;
 }
-.Pagination-Item-Link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 45px;
-  height: 45px;
-  font-size: 20px;
-  color: #4169e1;
-  font-weight: bold;
-  transition: all 0.15s linear;
+
+
+.pagination .page-numbers{
+  font-size: 25px;
+
+  padding:10px 10px;
+  color:#c5d4ee;
+
 }
-.Pagination-Item-Link-Icon {
-  width: 20px;
+.pagination .current{
+  color:#013FB4;
 }
-.Pagination-Item-Link.isActive {
-  pointer-events: none;
-  color: #111;
+.pagination .prev,
+.pagination .next{
+  color:#c5d4ee;
 }
-.Pagination-Item-Link:not(.isActive):hover {
-  opacity: 0.5;
-}
-// ページネーション
 
 /*========================
 サイドバー
@@ -74,6 +67,16 @@
     margin-right: 30px;
     min-width: 308px;
     margin-top: 125px;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      // bottom: 10px;
+      width: 300px;
+      height: 264px;
+      background: url(../img/vlobs-kick.png) no-repeat center center / contain;
+    }
   }
 }
 
@@ -143,8 +146,9 @@
   width: 100%;
   overflow: hidden;
   margin-top: 34px;
-  margin-bottom: 70px;
+  margin-bottom: 30px;
   background-color: #fff;
+  
 }
 .search_container input[type="text"] {
   border: none;
@@ -199,17 +203,7 @@
     display: flex;
   }
   @include cmn.mq("md") {
-    padding-bottom: 180px;
-    position: relative;
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 50px;
-      right: 50px;
-      width: 300px;
-      height: 300px;
-      background: url(../img/vlobs-kick.png) no-repeat center center / contain;
-    }
+    padding-bottom: 210px;
   }
 }
 
@@ -271,6 +265,7 @@
 .cmn-news-list {
   @include cmn.mq("md") {
     padding: 0 30px;
+    min-width: 67%;
   }
   margin-bottom: 48.5px;
   > .cmn-news-item {
