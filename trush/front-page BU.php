@@ -45,32 +45,21 @@
         if ($the_query->have_posts()) :
           while ($the_query->have_posts()) : $the_query->the_post();
         ?>
-
-            <!-- カテゴリー関係の取得 -->
-            <?php
-            $category = get_the_category();
-            $cat_name = $category[0]->cat_name;
-            $cat_slug = $category[0]->category_nicename;
-            ?>
             <li class="top-news-item">
               <a href="<?php the_permalink(); ?>">
                 <div class="top-news-article">
                   <div class="top-news-cat-wrapper">
-                    <div class="top-news-cat-info <?php echo $cat_slug; ?>">
+                    <div class="top-news-cat-info">
                       <?php
-                      $cats = get_the_category();
-                      foreach ($cats as $cat) {
-                        if ($cat->parent) {
-                          echo $cat->cat_name;
-                        }
-                      }
-                      ?>
-                    </div>
+                      $category = get_the_category();
+                      echo $category[0]->cat_name;
+                      ?></div>
                   </div>
                   <div class="top-news-post">
                     <div class="top-news-date"><?php the_time(get_option('date_format')); ?></div>
                     <p class="top-news-name">
-                      <?php the_title(); ?></p>
+                    <?php the_title(); // ex) 本日の◯◯イベントは雨天の為、明日に延期いたします 
+                    ?></p>
                     </p>
                   </div>
                   <span class="news-arrow"></span>
@@ -98,28 +87,28 @@
         if ($the_query->have_posts()) :
           while ($the_query->have_posts()) : $the_query->the_post();
         ?>
-            <li class="top-news-item">
-              <a href="#">
-                <div class="top-news-article">
+        <li class="top-news-item">
+          <a href="#">
+            <div class="top-news-article">
 
-                  <div class="sp-top-news-top">
-                    <div class="top-news-cat-info"> <?php
-                                                    $category = get_the_category();
-                                                    echo $category[0]->cat_name;
-                                                    ?></div>
-                    <div class="top-news-date"><?php the_time(get_option('date_format')); ?></div>
-                  </div>
-                  <div class="sp-top-news-bottom">
-                    <p class="top-news-name">
-                      <?php the_title();
-                      ?>
-                    </p>
-                    <span class="news-arrow"></span>
-                  </div>
-                </div>
-              </a>
-            </li>
-          <?php endwhile;
+              <div class="sp-top-news-top">
+                <div class="top-news-cat-info">                      <?php
+                      $category = get_the_category();
+                      echo $category[0]->cat_name;
+                      ?></div>
+                <div class="top-news-date"><?php the_time(get_option('date_format')); ?></div>
+              </div>
+              <div class="sp-top-news-bottom">
+                <p class="top-news-name">
+                <?php the_title(); 
+                    ?>
+                </p>
+                <span class="news-arrow"></span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <?php endwhile;
         else : ?>
           <p>まだ記事がありません</p>
         <?php endif; ?>

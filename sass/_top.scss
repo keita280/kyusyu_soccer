@@ -400,6 +400,7 @@
   padding: 5px 20px;
   font-size: 15px;
   line-height: 1;
+  min-width: 100px;
   @include cmn.mq("sp") {
     margin-right: 15px;
   }
