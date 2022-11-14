@@ -1,10 +1,12 @@
 <?php
+/*
+Template Name: tag-u14ページ
+*/
 get_header(); ?>
-<!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
-<!-- //contactタイトル-->
-<!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
-<main class="tag-training-bg">
-
+    <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
+    <!-- //contactタイトル-->
+    <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
+    <main class="tag-u14bg">
   <!-- パンくずリスト -->
   <?php if (function_exists('bcn_display')) : ?>
     <!-- breadcrumb -->
@@ -14,24 +16,24 @@ get_header(); ?>
     </div><!-- /breadcrumb -->
   <?php endif; ?>
 
-  <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
-  <!-- //一覧ページコンテンツ-->
-  <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
-  <div class="cmn-article-bg  cmn-news-bg">
-    <div class="cmn-article-wrapper tag-inner">
-      <section class="cmn-news-list tag-news-list-training">
+      <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
+      <!-- //一覧ページコンテンツ-->
+      <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
+      <div class="cmn-article-bg  cmn-news-bg">
+        <div class="cmn-article-wrapper tag-inner">
+          <section class="cmn-news-list tag-news-list-u14">
         <figure class="twitter-news is-pc"><a href=""></a></figure>
-        <h2 class="cmn-page-head training-page-head">GIRLS<span class="cmn-page-head-subttl">女子</span></h2>
+        <h2 class="cmn-page-head u14-page-head">U-14 大会<span class="cmn-page-head-subttl">九州クラブユースU-14大会　大会情報</span></h2>
         <div class="cmn-news-list-container">
 
-
+ 
           <!-- PCのニュース表示 -->
           <ul class="cmn-news-list is-pc">
 
             <?php
             $newslist = get_posts(array(
               'paged' => get_query_var('paged'), //これを加えました
-              'category_name' => 'info-cat-girls', //特定のカテゴリースラッグを指定
+              'category_name' => 'info-cat-u14', //特定のカテゴリースラッグを指定
               'posts_per_page' => 10, //取得記事件数
             ));
             $cat = get_the_category();
@@ -41,17 +43,11 @@ get_header(); ?>
               setup_postdata($post);
             ?>
 
-
               <li class="cmn-news-item">
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
                     <div class="cmn-news-cat-wrapper">
-                      <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
-                        <?php
-                        foreach ($cat as $cats) :
-                          if ($cats->parent) echo $cats->cat_name;
-                        endforeach;
-                        ?></div>
+                      <div class="cmn-news-cat-info <?php echo $cat_slug; ?>"><?php echo $catname; ?></div>
                     </div>
                     <div class="cmn-news-post">
                       <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
@@ -64,21 +60,19 @@ get_header(); ?>
                 </a>
               </li>
 
-
             <?php
             endforeach;
             wp_reset_postdata();
             ?>
-
           </ul>
 
           <!-- SPのニュース表示 -->
           <ul class="cmn-news-list is-sp">
 
-            <?php
+          <?php
             $newslist = get_posts(array(
               'paged' => get_query_var('paged'), //これを加えました
-              'category_name' => 'info-cat-girls', //特定のカテゴリースラッグを指定
+              'category_name' => 'info-cat-u14', //特定のカテゴリースラッグを指定
               'posts_per_page' => 10, //取得記事件数
             ));
             $cat = get_the_category();
@@ -101,14 +95,14 @@ get_header(); ?>
                       <span class="news-arrow"></span>
                     </div>
                   </div>
-
+                  
                 </a>
               </li>
+
             <?php
             endforeach;
             wp_reset_postdata();
             ?>
-          </ul>
 
           </ul>
 
@@ -130,9 +124,8 @@ get_header(); ?>
       </section>
 
 
-
-      <aside class="news-aside inner aside-bg-u18">
-        <?php get_sidebar(); ?>
+      <aside class="news-aside inner">
+      <?php get_sidebar(); ?>
       </aside>
     </div>
   </div>

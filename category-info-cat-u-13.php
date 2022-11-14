@@ -72,7 +72,7 @@
             <?php
             $newslist = get_posts(array(
               'paged' => get_query_var('paged'), //これを加えました
-              'category_name' => 'info-cat-dev', //特定のカテゴリースラッグを指定
+              'category_name' => 'info-cat-u-13', //特定のカテゴリースラッグを指定
               'posts_per_page' => 10, //取得記事件数
             ));
             $cat = get_the_category();
