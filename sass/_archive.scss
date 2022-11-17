@@ -329,11 +329,19 @@
   }
 }
 
-.info-cat-blue {
+.info-cat-blue  {
+  background: cmn.$color-blue;
+  color: #fff;
+}
+.info-cat-blue-child {
   background: cmn.$color-blue;
   color: #fff;
 }
 .info-cat-confirm {
+  background: #fff;
+  border: #000 1px solid;
+}
+.info-cat-confirm-child {
   background: #fff;
   border: #000 1px solid;
 }

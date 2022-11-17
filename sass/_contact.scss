@@ -13,7 +13,9 @@
 ========================*/
 .contact-inner {
   padding: 76px 0 140px 0;
-  padding: 23px 0 80px 0;
+  @include cmn.mq('sp'){
+    padding: 23px 0 80px 0;
+  }
 }
 
 .contact-attention {
@@ -32,13 +34,21 @@
 
 
 /* 共通 ------------------------------*/
-*[class*="cp-"],
-*[class*="cp-"] * {
-    box-sizing: border-box;
+.form-wrapper {
+  background-color: #F0F0F0;
+  max-width: 1000px;
+  @include cmn.mq('md'){
+    border-radius: 10px;
+  }
+  margin: 0 auto;
+  padding: 50px 100px;
+  @include cmn.mq('sp'){
+    padding: 25px 10px;
+  }
 }
 
 .form-container {
-
+  margin: 0 auto;
 }
 
 /* セクション */
@@ -58,9 +68,7 @@
     padding: 26px 23px 43px 23px;
   }
 }
-.cp-container-small {
-    // max-width: 750px;
-}
+
 
 /* テキスト */
 .cp-text-center {
@@ -77,7 +85,7 @@
 
 /* フォームリセット テキスト */
 .cp-riset-text {
-    width: 100%;
+  width: 100%;
     padding: 8px;
     font-size: 16px;
     border-radius: 10px;
@@ -131,6 +139,9 @@
     position: absolute;
     content: "";
     top: 13px;
+    @include cmn.mq('sp'){
+      // top: 19px;
+    }
     left: 4px;
     transform: translateY(-50%) rotate(-45deg);
     height: 6px;
@@ -278,7 +289,7 @@ label:not(:first-child) {
   vertical-align: middle;
   width: 75%;
   @include cmn.mq('sp'){
-    width: 90%;
+    width: 93%;
   }
 }
 /*モーダルを閉じるボタンの指定*/
@@ -300,4 +311,7 @@ label:not(:first-child) {
   background: #fff;
   text-align: left;
   padding: 30px;
+  @include cmn.mq('sp'){
+    padding: 10px;
+  }
 }

@@ -57,7 +57,7 @@
                 <div class="top-news-article">
                   <div class="top-news-cat-wrapper">
                     <div class="top-news-cat-info <?php echo $cat_slug; ?>">
-
+                    
                       <?php
                       $cats = get_the_category();
                       foreach ($cats as $cat) {
@@ -66,31 +66,7 @@
                         }
                       }
                       ?>
-
-
-                      <!-- 以下は条件分岐の挑戦。消して良い
-参考記事
-https://www.doe.co.jp/hp-tips/wordpress%E3%81%A7%E8%A6%AA%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA%E3%81%AE%E6%83%85%E5%A0%B1%E3%82%92%E5%8F%96%E5%BE%97%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/
-
-https://www.nishi2002.com/9474.html
-
-https://www.findxfine.com/programming/wp/995556441.html
-                    <?php
-                    $cats = get_the_category();
-                    $children = get_term_children($cat, 'category');
-                    $parent_cat = get_category($cat->category_parent);
-
-                    if (!empty($children)) {
-                      echo $cat->cat_name;
-                    } else {
-                      echo $parent_cat->cat_name;
-                    }
-                    ?> -->
-
-                      <!-- 条件分岐挑戦ここまで。消して良い -->
-
                     </div>
-
                   </div>
                   <div class="top-news-post">
                     <div class="top-news-date"><?php the_time(get_option('date_format')); ?></div>

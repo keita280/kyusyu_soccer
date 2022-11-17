@@ -2081,7 +2081,11 @@ ul.bottom-menu li:not(:last-child) {
 ========================*/
 .contact-inner {
   padding: 76px 0 140px 0;
-  padding: 23px 0 80px 0;
+}
+@media (max-width: 980px) {
+  .contact-inner {
+    padding: 23px 0 80px 0;
+  }
 }
 
 .contact-attention {
@@ -2099,10 +2103,25 @@ ul.bottom-menu li:not(:last-child) {
 }
 
 /* 共通 ------------------------------*/
-*[class*=cp-],
-*[class*=cp-] * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.form-wrapper {
+  background-color: #F0F0F0;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 100px;
+}
+@media (min-width: 981px) {
+  .form-wrapper {
+    border-radius: 10px;
+  }
+}
+@media (max-width: 980px) {
+  .form-wrapper {
+    padding: 25px 10px;
+  }
+}
+
+.form-container {
+  margin: 0 auto;
 }
 
 /* セクション */
@@ -2204,7 +2223,6 @@ ul.bottom-menu li:not(:last-child) {
   border-left: 2px solid #111111;
   opacity: 0;
 }
-
 .cp-riset-check:checked + span:after {
   opacity: 1;
 }
@@ -2335,7 +2353,7 @@ ul.bottom-menu li:not(:last-child) {
 }
 @media (max-width: 980px) {
   .modal-body {
-    width: 90%;
+    width: 93%;
   }
 }
 
@@ -2365,6 +2383,11 @@ ul.bottom-menu li:not(:last-child) {
   background: #fff;
   text-align: left;
   padding: 30px;
+}
+@media (max-width: 980px) {
+  .modal-content {
+    padding: 10px;
+  }
 }
 
 /*========================
@@ -2724,7 +2747,17 @@ ul.bottom-menu li:not(:last-child) {
   color: #fff;
 }
 
+.info-cat-blue-child {
+  background: #013FB4;
+  color: #fff;
+}
+
 .info-cat-confirm {
+  background: #fff;
+  border: #000 1px solid;
+}
+
+.info-cat-confirm-child {
   background: #fff;
   border: #000 1px solid;
 }
@@ -3110,7 +3143,7 @@ ul.bottom-menu li:not(:last-child) {
 
 .single-bg {
   padding: 0 40px 140px 40px;
-  background-color: #D8E4FD;
+  background-color: #d8e4fd;
 }
 @media (max-width: 980px) {
   .single-bg {
@@ -3119,7 +3152,7 @@ ul.bottom-menu li:not(:last-child) {
 }
 
 .single-h2ttl {
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 100px;
   margin-top: 50px;
   margin-bottom: 30px;
@@ -3148,6 +3181,11 @@ ul.bottom-menu li:not(:last-child) {
   margin-right: 64px;
   padding: 30px 30px 60px 30px;
 }
+@media (min-width: 981px) {
+  .single-container {
+    min-width: 64%;
+  }
+}
 @media (max-width: 980px) {
   .single-container {
     margin-right: 0;
@@ -3162,7 +3200,7 @@ ul.bottom-menu li:not(:last-child) {
 }
 
 .single-h1 {
-  color: #013FB4;
+  color: #013fb4;
   font-size: 36px;
   margin-top: 21px;
   margin-bottom: 28px;
@@ -3205,7 +3243,7 @@ ul.bottom-menu li:not(:last-child) {
 }
 
 .single-update {
-  color: #E20606;
+  color: #e20606;
 }
 .single-update > span {
   margin-left: 15px;
@@ -3217,6 +3255,17 @@ ul.bottom-menu li:not(:last-child) {
 @media (max-width: 980px) {
   .single-body {
     padding: 17px 10px 0 10px;
+  }
+}
+.single-body > p {
+  line-height: 1.7;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (max-width: 980px) {
+  .single-body > p {
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
@@ -3234,9 +3283,9 @@ ul.bottom-menu li:not(:last-child) {
 
 .single-h2 {
   font-size: 22px;
-  background-color: #D6E4FF;
+  background-color: #d6e4ff;
   padding: 8px 15px 8px 15px;
-  border-left: #013FB4 4px solid;
+  border-left: #013fb4 4px solid;
 }
 @media (max-width: 980px) {
   .single-h2 {
@@ -3247,7 +3296,7 @@ ul.bottom-menu li:not(:last-child) {
 }
 
 .single-h3 {
-  color: #013FB4;
+  color: #013fb4;
   font-size: 22px;
   border-bottom: 1px solid #707070;
   padding-bottom: 4px;

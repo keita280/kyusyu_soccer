@@ -43,6 +43,8 @@ get_header(); ?>
                     <div class="cmn-news-article">
                       <div class="cmn-news-cat-wrapper">
                         <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
+                          <!-- <?php echo $cat_name; ?> -->
+
                           <?php
                           $cats = get_the_category();
                           foreach ($cats as $cat) {
@@ -50,7 +52,10 @@ get_header(); ?>
                               echo $cat->cat_name;
                             }
                           }
+                          
                           ?>
+
+
                         </div>
                       </div>
                       
@@ -83,14 +88,7 @@ get_header(); ?>
                     <div class="cmn-news-article">
                       <div class="sp-cmn-news-top">
                         <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
-                        <?php
-                          $cats = get_the_category();
-                          foreach ($cats as $cat) {
-                            if ($cat->parent) {
-                              echo $cat->cat_name;
-                            }
-                          }
-                          ?>
+                          <?php echo $cat_name; ?>
                         </div>
                         <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
                       </div>
