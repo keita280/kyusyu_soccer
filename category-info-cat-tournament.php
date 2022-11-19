@@ -30,19 +30,32 @@ get_header(); ?>
           <!-- PCのニュース表示 -->
           <ul class="cmn-news-list is-pc">
 
-            <?php query_posts('cat=tournament&posts_per_page=10'); ?>
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                <?php
-                $category = get_the_category();
-                $cat_name = $category[0]->cat_name;
-                $cat_slug = $category[0]->category_nicename;
-                ?>
+
+
+<?php
+            $newslist = get_posts(array(
+              'paged' => get_query_var('paged'), //これを加えました
+              'category_name' => 'info-cat-tournament', //特定のカテゴリースラッグを指定
+              'posts_per_page' => 10, //取得記事件数
+            ));
+            $cat = get_the_category();
+            $cat_slug = $cat[0]->category_nicename;
+            $catname = $cat[0]->cat_name;
+            foreach ($newslist as $post) :
+              setup_postdata($post);
+            ?>
 
                 <li class="cmn-news-item">
                   <a href="<?php the_permalink(); ?>">
                     <div class="cmn-news-article">
                       <div class="cmn-news-cat-wrapper">
-                        <div class="cmn-news-cat-info <?php echo $cat_slug; ?>"><?php echo $cat_name; ?></div>
+                        <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
+                        <?php
+                        foreach ($cat as $cats) :
+                          if ($cats->parent) echo $cats->cat_name;
+                        endforeach;
+                        ?>
+                        </div>
                       </div>
                       <div class="cmn-news-post">
                         <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
@@ -55,26 +68,38 @@ get_header(); ?>
                   </a>
                 </li>
 
-              <?php endwhile; ?>
-            <?php endif; ?>
+                <?php
+            endforeach;
+            wp_reset_postdata();
+            ?>
           </ul>
 
           <!-- SPのニュース表示 -->
           <ul class="cmn-news-list is-sp">
-          <?php query_posts('cat=&posts_per_page=10'); ?>
-              <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-                  <?php
-                  $category = get_the_category();
-                  $cat_name = $category[0]->cat_name;
-                  $cat_slug = $category[0]->category_nicename;
-                  ?>
-
+          <?php
+            $newslist = get_posts(array(
+              'paged' => get_query_var('paged'), //これを加えました
+              'category_name' => 'info-cat-tournament', //特定のカテゴリースラッグを指定
+              'posts_per_page' => 10, //取得記事件数
+            ));
+            $cat = get_the_category();
+            $cat_slug = $cat[0]->category_nicename;
+            $catname = $cat[0]->cat_name;
+            foreach ($newslist as $post) :
+              setup_postdata($post);
+            ?>
 
               <li class="cmn-news-item">
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
                     <div class="sp-cmn-news-top">
-                      <div class="cmn-news-cat-info <?php echo $cat_slug; ?>"><?php echo $cat_name; ?></div>
+                      <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
+                      <?php
+                        foreach ($cat as $cats) :
+                          if ($cats->parent) echo $cats->cat_name;
+                        endforeach;
+                        ?>
+                    </div>
                       <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
                     </div>
                     <div class="sp-cmn-news-bottom">
@@ -87,8 +112,10 @@ get_header(); ?>
                 </a>
               </li>
 
-              <?php endwhile; ?>
-            <?php endif; ?>
+              <?php
+            endforeach;
+            wp_reset_postdata();
+            ?>
             <?php wp_reset_postdata(); ?>
           </ul>
 
@@ -108,31 +135,8 @@ get_header(); ?>
           <!-- ページネーション -->
         </div>
       </section>
-      <aside class="news-aside inner">
-        <div class="aside-inner">
-          <h3 class="aisde-ttl">NEWS CATEGORY</h3>
-          <ul class="aside-container">
-            <li class="aside-li opacity"><a href="">お知らせ一覧</a></li>
-            <li class="aside-li"><a href="" class=" opacity">大会情報一覧</a>
-              <ul class="aside-sub-container">
-                <li class="aside-sub-li opacity"><a href="">U-18選手権</a></li>
-                <li class="aside-sub-li opacity"><a href="">U-15選手権</a></li>
-                <li class="aside-sub-li opacity"><a href="">U-15選手権</a></li>
-                <li class="aside-sub-li opacity"><a href="">デベロップ大会</a></li>
-                <li class="aside-sub-li opacity"><a href="">U-13大会</a></li>
-                <li class="aside-sub-li opacity"><a href="">U-18TownClubCUP</a></li>
-                <li class="aside-sub-li opacity"><a href="">U-17大会</a></li>
-                <li class="aside-sub-li opacity"><a href="">U-14大会</a></li>
-                <li class="aside-sub-li opacity"><a href="">研修会・講習会</a></li>
-              </ul>
-            </li>
-            <li class="aside-li opacity"><a href="">加盟登録一覧</a></li>
-          </ul>
-        </div>
-        <form method="get" action="#" class="search_container">
-          <input type="text" size="25" placeholder="キーワードで検索">
-          <input type="submit" value="&#xf002">
-        </form>
+      <aside class="news-aside inner aside-bg-u18">
+        <?php get_sidebar(); ?>
       </aside>
     </div>
   </div>

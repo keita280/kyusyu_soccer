@@ -150,7 +150,7 @@ https://www.findxfine.com/programming/wp/995556441.html
         <?php endif; ?>
         <?php wp_reset_postdata(); ?>
       </ul>
-      <a href="">
+      <a href="<?php echo esc_url(home_url()); ?>/news/">
         <div class="btn-soccer news-button">お知らせ一覧</div>
       </a>
     </div>
@@ -165,46 +165,46 @@ https://www.findxfine.com/programming/wp/995556441.html
         <span class="top-tornament-subttl">大会情報</span>
       </div>
       <div class="tournament-container">
-        <a href="" class="tm-Btn tm-btn-u18">
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u18/" class="tm-Btn tm-btn-u18">
           <span class="tm-Btn-Text1">九州クラブユース</span>
           <span class="tm-Btn-Text2">U-18</span>
           <span class="tm-Btn-Text3">選手権</span>
         </a>
-        <a href="" class="tm-Btn tm-btn-u15">
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u-15/" class="tm-Btn tm-btn-u15">
           <span class="tm-Btn-Text1">九州クラブユース</span>
           <span class="tm-Btn-Text2">U-15</span>
           <span class="tm-Btn-Text3">選手権</span>
         </a>
-        <a href="" class="tm-Btn tm-btn-dev">
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-dev/" class="tm-Btn tm-btn-dev">
           <span class="tm-Btn-Text1">九州クラブユース</span>
           <span class="tm-Btn-Text2">デベロップ</span>
           <span class="tm-Btn-Text3">大会</span>
         </a>
-        <a href="" class="tm-Btn tm-btn-u13">
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u-13/" class="tm-Btn tm-btn-u13">
           <span class="tm-Btn-Text1">九州クラブユース</span>
           <span class="tm-Btn-Text2">U-13</span>
           <span class="tm-Btn-Text3">大会</span>
         </a>
-        <a href="" class="tm-Btn tm-btn-u18t">
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u18tcc/" class="tm-Btn tm-btn-u18t">
           <span class="tm-Btn-Text1">九州クラブユース</span>
           <span class="tm-Btn-Text2">U-18</span>
           <span class="tm-Btn-Text3">TownClubCUP</span>
         </a>
-        <a href="" class="tm-Btn tm-btn-u17">
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u17/" class="tm-Btn tm-btn-u17">
           <span class="tm-Btn-Text1">九州クラブユース</span>
           <span class="tm-Btn-Text2">U-17</span>
           <span class="tm-Btn-Text3">大会</span>
         </a>
-        <a href="" class="tm-Btn tm-btn-u14">
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u14/" class="tm-Btn tm-btn-u14" class="tm-Btn tm-btn-u14">
           <span class="tm-Btn-Text1">九州クラブユース</span>
           <span class="tm-Btn-Text2">U-14</span>
           <span class="tm-Btn-Text3">大会</span>
         </a>
-        <a href="" class="tm-Btn tm-btn-training">
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-girls/" class="tm-Btn tm-btn-training">
           <span class="tm-Btn-Text1">女子</span>
         </a>
       </div>
-      <a href="">
+      <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/">
         <div class="btn-soccer tournament-button">大会情報一覧</div>
       </a>
     </div>
@@ -225,7 +225,7 @@ https://www.findxfine.com/programming/wp/995556441.html
           九州内のU-18（高校生年齢）とU-15（中学生年齢）
           のクラブチームを構成メンバーとした任意団体です。クラブチームの普及と育成に取り組んでいます。
         </p>
-        <a href="">
+        <a href="<?php echo esc_url(home_url()); ?>/about/">
           <div class="btn-soccer top-about-button">連盟について</div>
         </a>
       </div>

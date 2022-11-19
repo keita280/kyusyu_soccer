@@ -67,14 +67,13 @@ get_header(); ?>
 
           <!-- SPのニュース表示 -->
           <ul class="cmn-news-list is-sp">
-
-            <?php
+          <?php
             $newslist = get_posts(array(
               'paged' => get_query_var('paged'), //これを加えました
-              'category_name' => 'entry', //特定のカテゴリースラッグを指定
+              'category_name' => 'info-cat-confirm', //特定のカテゴリースラッグを指定
               'posts_per_page' => 10, //取得記事件数
             ));
-            $cat = get_the_tags();
+            $cat = get_the_category();
             $catname = $cat[0]->cat_name;
             foreach ($newslist as $post) :
               setup_postdata($post);

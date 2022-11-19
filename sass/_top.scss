@@ -172,7 +172,7 @@
 }
 
 .logo-sp {
-  width: 258.48px;
+  max-width: 258.48px;
 }
 
 .header_bottom {
@@ -185,9 +185,6 @@
 }
 
 .header_bottom_list {
-  height: 78px;
-  padding: 26px 30px;
-  line-height: 24px;
   font-family: cmn.$font-ja;
   transition: 0.3s ease;
   &:hover {
@@ -215,6 +212,12 @@
 }
 
 .header_bottom_link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  // height: 78px;
+  padding: 26px 30px;
+  line-height: 24px;
 }
 
 // ヘッダーのアコーディオンメニュー

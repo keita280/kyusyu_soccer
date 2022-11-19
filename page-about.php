@@ -36,7 +36,7 @@ get_header(); ?>
         <!-- スクロールダウン -->
         <div class="scrolldown-container is-pc">
           <figure class="scrolldown">
-            <img src="./img/Down arrow small.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/Down arrow small.png" alt="" />
           </figure>
           <span class="about-scroll-txt">scroll</span>
         </div>
@@ -86,7 +86,7 @@ get_header(); ?>
         <!-- スクロールダウン -->
         <div class="scrolldown-container is-pc">
           <figure class="scrolldown">
-            <img src="./img/Down arrow small.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/Down arrow small.png" alt="" />
           </figure>
           <span class="about-scroll-txt">scroll</span>
         </div>

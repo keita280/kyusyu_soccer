@@ -51,7 +51,8 @@ get_header(); ?>
                         foreach ($cat as $cats) :
                           if ($cats->parent) echo $cats->cat_name;
                         endforeach;
-                        ?></div>
+                        ?>
+                      </div>
                     </div>
                     <div class="cmn-news-post">
                       <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
@@ -91,7 +92,7 @@ get_header(); ?>
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
                     <div class="sp-cmn-news-top">
-                    <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
+                      <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
                         <?php
                         foreach ($cat as $cats) :
                           if ($cats->parent) echo $cats->cat_name;

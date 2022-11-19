@@ -135,19 +135,19 @@
 
 // 検索ボックス
 .search_container {
-  box-sizing: border-box;
-  position: relative;
-  border: 1px solid #999;
-  padding: 3px 10px;
-  border-radius: 20px;
-  height: 2.3em;
+  // box-sizing: border-box;
+  // position: relative;
+  // border: 1px solid #999;
+  // padding: 3px 10px;
+  // border-radius: 20px;
+  // height: 2.3em;
   // width: 260px;
-  max-width: 326px;
-  width: 100%;
-  overflow: hidden;
-  margin-top: 34px;
-  margin-bottom: 30px;
-  background-color: #fff;
+  // max-width: 326px;
+  // width: 100%;
+  // overflow: hidden;
+  // margin-top: 34px;
+  // margin-bottom: 30px;
+  // background-color: #fff;
   
 }
 .search_container input[type="text"] {
@@ -345,6 +345,10 @@
   background: #fff;
   border: #000 1px solid;
 }
+.info-cat-u18 {
+  color: #fff;
+  background-color: #3101B4;  
+}
 .info-cat-u-18 {
   color: #fff;
   background-color: #3101B4;  
@@ -486,4 +490,20 @@
 .sp-cmn-news-bottom {
   display: flex;
   align-items: center;
+}
+
+.search-body {
+  box-sizing: border-box;
+  position: relative;
+  border: 1px solid #999;
+  padding: 3px 10px;
+  border-radius: 20px;
+  height: 2.3em;
+  width: 260px;
+  max-width: 326px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 34px;
+  margin-bottom: 30px;
+  background-color: #fff;
 }

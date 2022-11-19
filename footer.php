@@ -7,10 +7,10 @@
       <div class="footer-left">
         <div class="footer-left-ttl">九州クラブユースサッカー連盟</div>
         <figure class="footer-left-logo">
-          <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="" /></a>
+          <a href="<?php echo get_template_directory_uri(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="" /></a>
         </figure>
         <figure class="footer-left-link-jfa is-pc">
-          <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
+          <a href="https://kyushu-fa.jp/"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
         </figure>
         <p class="footer-left-arr is-pc">
           © Kyushu Club Youth Football Federation.All Rights Reserved.
@@ -20,24 +20,24 @@
         <div class="footer-center-top">
           <ul class="footer-center-top-l">
             <li class="">
-              <a class="footer-center-top-link" href="">HOME</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>">HOME</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link" href="">連盟概要</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/about/">連盟概要</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link" href="">加盟チーム</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-confirm/">加盟チーム</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link" href="">大会情報</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/">大会情報</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link" href="">加盟登録</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-confirm/">加盟登録</a>
             </li>
           </ul>
           <ul class="footer-center-top-r">
             <li class="">
-              <a class="footer-center-top-link" href="">お問い合わせ</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/contact/">お問い合わせ</a>
             </li>
             <li class="">
               <a class="footer-center-top-link" href="">プライバシーポリシー</a>
@@ -52,7 +52,7 @@
         </div>
         <ul class="footer-center-bottom">
           <li class="">
-            <a class="footer-center-top-link" href="">一般社団法人 九州サッカー協会<span class="link-assosiation"></span></a>
+            <a class="footer-center-top-link" href="https://kyushu-fa.jp/" target="_blank">一般社団法人 九州サッカー協会<span class="link-assosiation"></span></a>
           </li>
           <li class="">
             <a class="footer-center-top-link" href="">関連リンク</a>
