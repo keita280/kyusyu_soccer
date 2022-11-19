@@ -34,8 +34,9 @@
 
 
 /* 共通 ------------------------------*/
-.form-wrapper {
+.wpcf7 {
   background-color: #F0F0F0;
+  
   max-width: 1000px;
   @include cmn.mq('md'){
     border-radius: 10px;
@@ -73,6 +74,12 @@
 /* テキスト */
 .cp-text-center {
     text-align: center;
+}
+
+
+
+.wpcf7-form-control {
+  display: block;
 }
 
 /* ラベル */
@@ -113,6 +120,10 @@
 /* フォームリセット チェックボックス */
 .cp-riset-check {
     display: none;
+}
+
+.wpcf7-list-item {
+  margin-left: 0;
 }
 .cp-riset-check + span {
     display: inline-block;
@@ -157,7 +168,7 @@
 
 /* フォームリセット ボタン */
 .cp-riset-submit {
-    display: inline-block;
+    display: block;
     max-width: 100%;
     margin: 0;
     padding: 6px 75px;
@@ -183,6 +194,15 @@
 .cp-submit-primary:hover {
     color: #fff;
     background: #013FB4;
+}
+
+.cp-text-submit {
+  text-align: center;
+}
+
+.wpcf7-form-control {
+  display: block;
+  margin: 0 auto;
 }
 
 /* お問合せフォーム ------------------------------*/
@@ -212,7 +232,7 @@
 
 .cp-contactForm01__privacy {
   margin-top: 13px;
-  padding: 17px 48px 32px 17px;
+  padding: 20px 20px 20px 20px;
   @include cmn.mq('sp'){
     padding: 25px 17px 32px 17px;
   }
@@ -315,3 +335,4 @@ label:not(:first-child) {
     padding: 10px;
   }
 }
+
