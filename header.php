@@ -56,13 +56,13 @@
             <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>">加盟チーム</a>
           </li>
           <li class="header_bottom_list">
-            <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/tournament/">大会情報</a>
+            <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/">大会情報</a>
           </li>
           <li class="header_bottom_list">
-            <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/entry/">加盟登録</a>
+            <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-confirm/">加盟登録</a>
           </li>
           <li class="header_bottom_list">
-            <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/archive/">お知らせ</a>
+            <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/news/">お知らせ</a>
           </li>
           <li class="header_bottom_list">
             <a class="header_bottom_link" href="">関連リンク</a>
@@ -91,45 +91,45 @@
         <nav>
           <ul>
             <li ontouchstart="">
-              <a class="nav-content-link" href="#">HOME</a>
+              <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>">HOME</a>
             </li>
             <li ontouchstart="">
-              <a class="nav-content-link" href="#">連盟概要</a>
+              <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/about/">連盟概要</a>
             </li>
             <li ontouchstart="">
               <a class="nav-content-link" href="#">加盟チーム</a>
             </li>
             <li ontouchstart="">
-              <a class="nav-content-link" href="#">大会情報</a>
+              <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/">大会情報</a>
             </li>
             <li ontouchstart="">
-              <a class="nav-content-link" href="#">加盟登録</a>
+              <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-confirm/">加盟登録</a>
             </li>
             <li ontouchstart="">
-              <a class="nav-content-link" href="#">お知らせ</a>
+              <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/news/">お知らせ</a>
             </li>
             <li ontouchstart="">
               <a class="nav-content-link" href="#">関連リンク</a>
             </li>
             <li ontouchstart="">
-              <a class="nav-content-link" href="#">お問い合わせ</a>
+              <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/contact/">お問い合わせ</a>
             </li>
           </ul>
         </nav>
-        <a class="nav-twiitter">
+        <a class="nav-twiitter" href="https://twitter.com/kcfinformation?s=20&t=LVG8eRM9XrwS7Qt42Tm1Fw">
           <img src="<?php echo get_template_directory_uri(); ?>/img/twitter-humberger.png" alt="" />
         </a>
         <div class="nav-logo">
           <div class="nav-logo-ttl">九州クラブユースサッカー連盟</div>
           <div class="nav-logo-img">
-            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/nav-logo.png" alt="" /></a>
+            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/nav-logo.png" alt="" ></a>
           </div>
         </div>
       </div>
 
       <h1 class="h1-pc">
-        <a href="">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/header_logo_sp.png" alt="" />
+        <a href="<?php echo esc_url(home_url()); ?>">
+          <img src="<?php echo get_template_directory_uri(); ?>/img/header_logo_sp.png" alt="" class="logo-sp">
         </a>
       </h1>
 

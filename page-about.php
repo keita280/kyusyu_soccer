@@ -36,7 +36,7 @@ get_header(); ?>
         <!-- スクロールダウン -->
         <div class="scrolldown-container is-pc">
           <figure class="scrolldown">
-            <img src="./img/Down arrow small.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/Down arrow small.png" alt="下にスクロールするよう促すアイコン" />
           </figure>
           <span class="about-scroll-txt">scroll</span>
         </div>
@@ -54,7 +54,7 @@ get_header(); ?>
                   和毅
                 </p>
               </div>
-              <a class="about-body-contact opacity" href=""
+              <a class="about-body-contact opacity" href="<?php echo esc_url(home_url()); ?>/contact/"
                 >お問合せフォームはこちらから</a
               >
             </div>
@@ -67,14 +67,14 @@ get_header(); ?>
               <div class="about-body-bottom-subttl org-subttl">組織と規約</div>
               <a
                 class="about-body-bottom-r-txt opacity"
-                href=""
+                href="<?php echo get_template_directory_uri(); ?>/img/yakuin.pdf"
                 target="_blank"
               >
                 九州クラブユースサッカー連盟役員一覧
               </a>
               <a
                 class="about-body-bottom-r-txt opacity"
-                href=""
+                href="<?php echo get_template_directory_uri(); ?>/img/kiyaku.pdf"
                 target="_blank"
               >
                 九州クラブユースサッカー連盟規約
@@ -86,7 +86,7 @@ get_header(); ?>
         <!-- スクロールダウン -->
         <div class="scrolldown-container is-pc">
           <figure class="scrolldown">
-            <img src="./img/Down arrow small.png" alt="" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/Down arrow small.png" alt="下にスクロールするよう促すアイコン" />
           </figure>
           <span class="about-scroll-txt">scroll</span>
         </div>

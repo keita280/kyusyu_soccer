@@ -7,10 +7,10 @@
       <div class="footer-left">
         <div class="footer-left-ttl">九州クラブユースサッカー連盟</div>
         <figure class="footer-left-logo">
-          <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="" /></a>
+          <a href="<?php echo get_template_directory_uri(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="" /></a>
         </figure>
         <figure class="footer-left-link-jfa is-pc">
-          <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
+          <a href="https://kyushu-fa.jp/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
         </figure>
         <p class="footer-left-arr is-pc">
           © Kyushu Club Youth Football Federation.All Rights Reserved.
@@ -20,24 +20,24 @@
         <div class="footer-center-top">
           <ul class="footer-center-top-l">
             <li class="">
-              <a class="footer-center-top-link" href="">HOME</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>">HOME</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link" href="">連盟概要</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/about/">連盟概要</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link" href="">加盟チーム</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-confirm/">加盟チーム</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link" href="">大会情報</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/">大会情報</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link" href="">加盟登録</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-confirm/">加盟登録</a>
             </li>
           </ul>
           <ul class="footer-center-top-r">
             <li class="">
-              <a class="footer-center-top-link" href="">お問い合わせ</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/contact/">お問い合わせ</a>
             </li>
             <li class="">
               <a class="footer-center-top-link" href="">プライバシーポリシー</a>
@@ -46,13 +46,13 @@
               <a class="footer-center-top-link" href="">サイトポリシー</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link is-sp" href=""><img class="sp-twitter-link" src="<?php echo get_template_directory_uri(); ?>/img/sp-footer-twitter.png" alt="Twitterリンク" /></a>
+              <a class="footer-center-top-link is-sp" href="https://twitter.com/kcfinformation?s=20&t=LVG8eRM9XrwS7Qt42Tm1Fw" target="_blank"><img class="sp-twitter-link" src="<?php echo get_template_directory_uri(); ?>/img/sp-footer-twitter.png" alt="Twitterリンク" /></a>
             </li>
           </ul>
         </div>
         <ul class="footer-center-bottom">
           <li class="">
-            <a class="footer-center-top-link" href="">一般社団法人 九州サッカー協会<span class="link-assosiation"></span></a>
+            <a class="footer-center-top-link" href="https://kyushu-fa.jp/" target="_blank">一般社団法人 九州サッカー協会<span class="link-assosiation"></span></a>
           </li>
           <li class="">
             <a class="footer-center-top-link" href="">関連リンク</a>
@@ -63,7 +63,7 @@
         </ul>
       </div>
       <div class="footer-right is-pc">
-        <a class="twitter-timeline" data-width="250" data-height="400" data-theme="light" href="https://twitter.com/JFA?ref_src=twsrc%5Etfw">Tweets by JFA</a>
+        <a class="twitter-timeline" data-width="250" data-height="400" data-theme="light" href="https://twitter.com/kcfinformation?s=20&t=LVG8eRM9XrwS7Qt42Tm1Fw">Tweets by JFA</a>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
     </div>
@@ -80,17 +80,17 @@
     <ul class="bottom-menu is-sp">
       <li ontouchstart class="sp-nav-li1">
         <!--　↓↓項目1. ホーム 　＃の部分にホームのURLを入れる -->
-        <a href="#"> <span class="mini-text">HOME</span></a>
+        <a href="<?php echo esc_url(home_url()); ?>"> <span class="mini-text">HOME</span></a>
       </li>
 
       <li class="sp-nav-li2 menu-width-max">
         <!-- ↓↓項目2. おすすめ　すぐ下の"＃"はそのまま -->
-        <a href="#"><span class="mini-text">大会情報</span></a>
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/"><span class="mini-text">大会情報</span></a>
       </li>
       <li class="sp-nav-li3">
         <!-- ↓↓項目3.　読者登録 ↓↓の部分の書き換えが必要です -->
         <!--  ~hatena.ne.jp/自分のはてなID/URL(http://の部分は無し)/subscribe　-->
-        <a href="" target="_blank">
+        <a href="https://twitter.com/kcfinformation?s=20&t=LVG8eRM9XrwS7Qt42Tm1Fw" target="_blank">
           <span class="mini-text bottom-menu-twitter">
             試合結果<span class="footer-nav-yellow">速報</span>
           </span>

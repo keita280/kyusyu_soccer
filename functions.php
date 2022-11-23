@@ -98,9 +98,33 @@ add_action('init', 'my_menu_init');
 // }
 // add_action('bcn_after_fill', 'bcn_insert_test');
 
+/**
+ * パンくずリストを３階層のみ表示
+ */
+add_action('bcn_after_fill', 'bc_limit');
+function bc_limit ($trail) {
+  $max = count($trail->breadcrumbs);
+  for ($i = 2; $i < $max - 1; $i++) {
+    unset($trail -> trail[$i]);
+  }
+}
+
 
 // ContactForm7で自動挿入されるPタグ、brタグを削除
 add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
 function wpcf7_autop_return_false() {
   return false;
 } 
+
+
+
+
+// 検索フォームの初期設定では、投稿ページ、固定ページの両方が検索対象となります。
+// 今回は、検索対象を投稿ページだけにするためのカスタマイズを行います。
+function search_filter($query) {
+  if ($query -> is_search) {
+    $query -> set('post_type', 'post');
+  }
+  return $query;
+}
+add_filter('pre_get_posts', 'search_filter');

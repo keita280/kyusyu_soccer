@@ -22,6 +22,7 @@
 
 .single-wrapper {
   display: flex;
+
   @include cmn.mq("sp") {
     display: block;
   }
@@ -84,9 +85,9 @@
   margin-right: 30px;
 
   > span {
-    margin-left: 15px;
+    margin-left: 47px;
     @include cmn.mq("sp") {
-      margin-left: 63px;
+      margin-left: 47px;
     }
   }
 }
@@ -111,6 +112,10 @@
       padding-right: 5px;
     }
   }
+}
+
+.single-body img {
+  width: auto;  
 }
 
 .single-txt {
@@ -146,4 +151,9 @@
 .single-h4 {
   line-height: 1.575;
   font-weight: 700;
+}
+
+
+.ez-toc-container-direction {
+  margin-top: 20px;
 }
