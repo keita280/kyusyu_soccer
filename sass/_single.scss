@@ -107,6 +107,7 @@
     line-height: 1.7;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 2em;
     @include cmn.mq("sp") {
       padding-left: 5px;
       padding-right: 5px;
@@ -117,6 +118,13 @@
 .single-body img {
   width: auto;  
 }
+
+
+.single-body a {
+  color: #0000EE;
+}
+
+
 
 .single-txt {
   line-height: 1.7;
@@ -133,22 +141,58 @@
   background-color: #d6e4ff;
   padding: 8px 15px 8px 15px;
   border-left: #013fb4 4px solid;
+  margin-bottom: 10px;
+  margin-top: 5px;
   @include cmn.mq("sp") {
     font-size: 19px;
     padding: 5px 5px 5px 5px;
     line-height: 1.3;
   }
 }
+
+.single-body h2 {
+  font-size: 22px;
+  background-color: #d6e4ff;
+  padding: 8px 15px 8px 15px;
+  border-left: #013fb4 4px solid;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  @include cmn.mq("sp") {
+    font-size: 19px;
+    padding: 5px 5px 5px 5px;
+    line-height: 1.3;
+  }
+}
+
 .single-h3 {
   color: #013fb4;
   font-size: 22px;
   border-bottom: 1px solid #707070;
   padding-bottom: 4px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  @include cmn.mq("sp") {
+    font-size: 18px;
+  }
+}
+
+.single-body h3 {
+  color: #013fb4;
+  font-size: 22px;
+  border-bottom: 1px solid #707070;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  margin-top: 5px;
   @include cmn.mq("sp") {
     font-size: 18px;
   }
 }
 .single-h4 {
+  line-height: 1.575;
+  font-weight: 700;
+}
+
+.single-body h4 {
   line-height: 1.575;
   font-weight: 700;
 }

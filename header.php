@@ -53,7 +53,7 @@
             <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/about/">連盟概要</a>
           </li>
           <li class="header_bottom_list">
-            <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>">加盟チーム</a>
+            <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/taem/1056/" >加盟チーム</a>
           </li>
           <li class="header_bottom_list">
             <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/">大会情報</a>
@@ -65,7 +65,7 @@
             <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/news/">お知らせ</a>
           </li>
           <li class="header_bottom_list">
-            <a class="header_bottom_link" href="">関連リンク</a>
+            <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/news/link/970/">関連リンク</a>
           </li>
           <li class="header_bottom_list">
             <a class="header_bottom_link" href="<?php echo esc_url(home_url()); ?>/contact/">お問い合わせ</a>
@@ -97,7 +97,7 @@
               <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/about/">連盟概要</a>
             </li>
             <li ontouchstart="">
-              <a class="nav-content-link" href="#">加盟チーム</a>
+              <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/taem/1056/">加盟チーム</a>
             </li>
             <li ontouchstart="">
               <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/">大会情報</a>
@@ -109,7 +109,7 @@
               <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/news/">お知らせ</a>
             </li>
             <li ontouchstart="">
-              <a class="nav-content-link" href="#">関連リンク</a>
+              <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/news/link/970/">関連リンク</a>
             </li>
             <li ontouchstart="">
               <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/contact/">お問い合わせ</a>

@@ -214,7 +214,7 @@ https://www.findxfine.com/programming/wp/995556441.html
   <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
 //ABOUT & TEAM
 //＠＠＠  ＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
-  <section class="top-introduction">
+  <section class="top-introduction" id="top-introduction">
     <div class="top-about inner wow fadeInLeft">
       <figure class="top-about-img is-pc">
         <img src="<?php echo get_template_directory_uri(); ?>/img/top-about.png" alt="" />
@@ -248,14 +248,14 @@ https://www.findxfine.com/programming/wp/995556441.html
         </a>
       </div>
       <div class="top-team-r">
-        <a class="top-team-r1 top-team-block">FUKUOKA<span>福岡県</span></a>
-        <a class="top-team-r2 top-team-block">SAGA<span>佐賀県</span></a>
-        <a class="top-team-r3 top-team-block">NAGASAKI<span>長崎県</span></a>
-        <a class="top-team-r4 top-team-block">KUMAMOTO<span>熊本県</span></a>
-        <a class="top-team-r5 top-team-block">OITA<span>大分県</span></a>
-        <a class="top-team-r6 top-team-block">MIYAZAKI<span>宮崎県</span></a>
-        <a class="top-team-r7 top-team-block">KAGOSHIMA<span>鹿児島県</span></a>
-        <a class="top-team-r8 top-team-block">OKINAWA<span>沖縄県</span></a>
+        <a class="top-team-r1 top-team-block" href="<?php echo esc_url(home_url()); ?>/fukuoka/990/">FUKUOKA<span>福岡県</span></a>
+        <a class="top-team-r2 top-team-block" href="<?php echo esc_url(home_url()); ?>/saga/1033/">SAGA<span>佐賀県</span></a>
+        <a class="top-team-r3 top-team-block" href="<?php echo esc_url(home_url()); ?>/nagasaki/1038/">NAGASAKI<span>長崎県</span></a>
+        <a class="top-team-r4 top-team-block" href="<?php echo esc_url(home_url()); ?>/kumamoto/1040/">KUMAMOTO<span>熊本県</span></a>
+        <a class="top-team-r5 top-team-block" href="<?php echo esc_url(home_url()); ?>/oita/1042/">OITA<span>大分県</span></a>
+        <a class="top-team-r6 top-team-block" href="<?php echo esc_url(home_url()); ?>/miyazaki/1046/">MIYAZAKI<span>宮崎県</span></a>
+        <a class="top-team-r7 top-team-block" href="<?php echo esc_url(home_url()); ?>kagoshima/1050/">KAGOSHIMA<span>鹿児島県</span></a>
+        <a class="top-team-r8 top-team-block" href="<?php echo esc_url(home_url()); ?>okinawa/1052/">OKINAWA<span>沖縄県</span></a>
       </div>
       <a href="">
         <div class="btn-soccer tournament-button is-sp">受賞クラブ紹介</div>

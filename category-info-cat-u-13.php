@@ -31,7 +31,7 @@
             <?php
             $newslist = get_posts(array(
               'paged' => get_query_var('paged'), //これを加えました
-              'category_name' => 'info-cat-dev', //特定のカテゴリースラッグを指定
+              'category_name' => 'info-cat-u-13', //特定のカテゴリースラッグを指定
               'posts_per_page' => 10, //取得記事件数
             ));
             $cat = get_the_category();
@@ -45,7 +45,7 @@
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
                     <div class="cmn-news-cat-wrapper">
-                      <div class="cmn-news-cat-info <?php echo $cat_slug; ?>"><?php echo $cat_name; ?><?php echo $catname; ?></div>
+                      <div class="cmn-news-cat-info <?php echo $cat_slug; ?>"><?php echo $catname; ?></div>
                     </div>
                     <div class="cmn-news-post">
                       <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
@@ -102,7 +102,6 @@
             endforeach;
             wp_reset_postdata();
         ?>
-          </ul>
 
         </ul>
 
