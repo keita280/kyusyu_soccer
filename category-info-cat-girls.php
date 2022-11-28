@@ -98,12 +98,14 @@ get_header(); ?>
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
                     <div class="sp-cmn-news-top">
+
                       <div class="cmn-news-cat-info 
                       <?php
                         foreach ($cat as $cats) :
                           if ($cats->parent) echo $cats->category_nicename;
                         endforeach;
                         ?>">
+
                         <?php
                         foreach ($cat as $cats) :
                           if ($cats->parent) echo $cats->cat_name;

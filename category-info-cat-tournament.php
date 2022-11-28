@@ -32,7 +32,7 @@ get_header(); ?>
 
 
 
-<?php
+            <?php
             $newslist = get_posts(array(
               'paged' => get_query_var('paged'), //これを加えました
               'category_name' => 'info-cat-tournament', //特定のカテゴリースラッグを指定
@@ -45,40 +45,41 @@ get_header(); ?>
               setup_postdata($post);
             ?>
 
-                <li class="cmn-news-item">
-                  <a href="<?php the_permalink(); ?>">
-                    <div class="cmn-news-article">
-                      <div class="cmn-news-cat-wrapper">
-                        <div class="cmn-news-cat-info <?php
-                                        $cats = get_the_category();
-                                        foreach ($cats as $cat) {
-                                          if ($cat->parent) {
-                                            echo $cat->category_nicename;
-                                          }
-                                        }
-                                        ?>">
-                                        <?php
-                                        $cats = get_the_category();
-                                        foreach ($cats as $cat) {
-                                          if ($cat->parent) {
-                                            echo $cat->cat_name;
-                                          }
-                                        }
-                                        ?>
-                        </div>
-                      </div>
-                      <div class="cmn-news-post">
-                        <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
-                        <p class="cmn-news-name">
-                          <?php the_title(); ?>
-                        </p>
-                      </div>
-                      <span class="news-arrow"></span>
-                    </div>
-                  </a>
-                </li>
+              <li class="cmn-news-item">
+                <a href="<?php the_permalink(); ?>">
+                  <div class="cmn-news-article">
+                    <div class="cmn-news-cat-wrapper">
+                      <div class="cmn-news-cat-info <?php
+                                                    $cats = get_the_category();
+                                                    foreach ($cats as $cat) {
+                                                      if ($cat->parent) {
+                                                        echo $cat->category_nicename;
+                                                      }
+                                                    }
+                                                    ?>">
+                        <?php
+                        $cats = get_the_category();
+                        foreach ($cats as $cat) {
+                          if ($cat->parent) {
+                            echo $cat->cat_name;
+                          }
+                        }
+                        ?>
 
-                <?php
+                      </div>
+                    </div>
+                    <div class="cmn-news-post">
+                      <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
+                      <p class="cmn-news-name">
+                        <?php the_title(); ?>
+                      </p>
+                    </div>
+                    <span class="news-arrow"></span>
+                  </div>
+                </a>
+              </li>
+
+            <?php
             endforeach;
             wp_reset_postdata();
             ?>
@@ -86,7 +87,7 @@ get_header(); ?>
 
           <!-- SPのニュース表示 -->
           <ul class="cmn-news-list is-sp">
-          <?php
+            <?php
             $newslist = get_posts(array(
               'paged' => get_query_var('paged'), //これを加えました
               'category_name' => 'info-cat-tournament', //特定のカテゴリースラッグを指定
@@ -104,22 +105,23 @@ get_header(); ?>
                   <div class="cmn-news-article">
                     <div class="sp-cmn-news-top">
                       <div class="cmn-news-cat-info                                         <?php
-                                        $cats = get_the_category();
-                                        foreach ($cats as $cat) {
-                                          if ($cat->parent) {
-                                            echo $cat->category_nicename;
-                                          }
-                                        }
-                                        ?>">
-                                        <?php
-                                        $cats = get_the_category();
-                                        foreach ($cats as $cat) {
-                                          if ($cat->parent) {
-                                            echo $cat->cat_name;
-                                          }
-                                        }
-                                        ?>
-                    </div>
+                                                                                            $cats = get_the_category();
+                                                                                            foreach ($cats as $cat) {
+                                                                                              if ($cat->parent) {
+                                                                                                echo $cat->category_nicename;
+                                                                                              }
+                                                                                            }
+                                                                                            ?>">
+                        <?php
+                        $cats = get_the_category();
+                        foreach ($cats as $cat) {
+                          if ($cat->parent) {
+                            echo $cat->cat_name;
+                          }
+                        }
+                        ?>
+
+                      </div>
                       <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
                     </div>
                     <div class="sp-cmn-news-bottom">
@@ -132,7 +134,7 @@ get_header(); ?>
                 </a>
               </li>
 
-              <?php
+            <?php
             endforeach;
             wp_reset_postdata();
             ?>

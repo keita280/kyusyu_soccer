@@ -94,6 +94,7 @@
               <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>">HOME</a>
             </li>
             <li>
+
               <a class="nav-content-link" href="<?php echo esc_url(home_url()); ?>/about/">連盟概要</a>
             </li>
             <li>

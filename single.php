@@ -74,10 +74,10 @@
     <?php endwhile;
   endif; ?>
 
-
     <aside class="single-aside inner aside-bg-u18">
       <?php get_sidebar(); ?>
     </aside>
+
       </div>
 </main>
 <?php get_footer(); ?>
