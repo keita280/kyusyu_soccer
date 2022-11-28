@@ -87,17 +87,6 @@ ul.bottom-menu li {
 .sp-nav-li4 {
   width: 45px;
   padding-top: 6px;
-    // ホバー時の挙動
-    &:hover {
-      background-color: #fff;
-      .dli-chevron-up {
-        color: #013FB4;
-        
-      }
-      > a {
-        color: #013FB4;
-      }
-    }
 }
 
 .bottom-menu li a {

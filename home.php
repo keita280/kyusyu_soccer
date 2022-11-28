@@ -31,18 +31,19 @@ get_header(); ?>
 
             <?php if (have_posts()) : ?>
               <?php while (have_posts()) : the_post(); ?>
-                <?php
-                $category = get_the_category();
-                $cat_name = $category[0]->cat_name;
-                $cat_slug = $category[0]->category_nicename;
-                ?>
-
 
                 <li class="cmn-news-item">
                   <a href="<?php the_permalink(); ?>">
                     <div class="cmn-news-article">
                       <div class="cmn-news-cat-wrapper">
-                        <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
+                        <div class="cmn-news-cat-info <?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->category_nicename;
+                                          }
+                                        }
+                                        ?>">
                           <?php
                           $cats = get_the_category();
                           foreach ($cats as $cat) {
@@ -72,17 +73,20 @@ get_header(); ?>
           <ul class="cmn-news-list is-sp">
             <?php if (have_posts()) : ?>
               <?php while (have_posts()) : the_post(); ?>
-                <?php
-                $category = get_the_category();
-                $cat_name = $category[0]->cat_name;
-                $cat_slug = $category[0]->category_nicename;
-                ?>
+
 
                 <li class="cmn-news-item">
                   <a href="<?php the_permalink(); ?>">
                     <div class="cmn-news-article">
                       <div class="sp-cmn-news-top">
-                        <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
+                        <div class="cmn-news-cat-info <?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->category_nicename;
+                                          }
+                                        }
+                                        ?>">
                         <?php
                           $cats = get_the_category();
                           foreach ($cats as $cat) {

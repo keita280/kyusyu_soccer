@@ -49,12 +49,22 @@ get_header(); ?>
                   <a href="<?php the_permalink(); ?>">
                     <div class="cmn-news-article">
                       <div class="cmn-news-cat-wrapper">
-                        <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
-                        <?php
-                        foreach ($cat as $cats) :
-                          if ($cats->parent) echo $cats->cat_name;
-                        endforeach;
-                        ?>
+                        <div class="cmn-news-cat-info <?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->category_nicename;
+                                          }
+                                        }
+                                        ?>">
+                                        <?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->cat_name;
+                                          }
+                                        }
+                                        ?>
                         </div>
                       </div>
                       <div class="cmn-news-post">
@@ -93,12 +103,22 @@ get_header(); ?>
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
                     <div class="sp-cmn-news-top">
-                      <div class="cmn-news-cat-info <?php echo $cat_slug; ?>">
-                      <?php
-                        foreach ($cat as $cats) :
-                          if ($cats->parent) echo $cats->cat_name;
-                        endforeach;
-                        ?>
+                      <div class="cmn-news-cat-info                                         <?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->category_nicename;
+                                          }
+                                        }
+                                        ?>">
+                                        <?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->cat_name;
+                                          }
+                                        }
+                                        ?>
                     </div>
                       <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
                     </div>
@@ -124,7 +144,7 @@ get_header(); ?>
           <ul class="Pagination">
             <?php
             $args = array(
-              'mid_size' => 3,
+              'mid_size' => 1,
               'prev_text' => '<i class="fa-solid fa-arrow-left"></i>',
               'next_text' => '<i class="fa-solid fa-arrow-right"></i>',
               'screen_reader_text' => '',

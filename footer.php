@@ -7,7 +7,7 @@
       <div class="footer-left">
         <div class="footer-left-ttl">九州クラブユースサッカー連盟</div>
         <figure class="footer-left-logo">
-          <a href="<?php echo get_template_directory_uri(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="" /></a>
+          <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="" /></a>
         </figure>
         <figure class="footer-left-link-jfa is-pc">
           <a href="https://kyushu-fa.jp/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
@@ -40,11 +40,11 @@
               <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/contact/">お問い合わせ</a>
             </li>
             <li class="">
-              <a class="footer-center-top-link" href="">プライバシーポリシー</a>
+              <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/privacy/1084/">プライバシーポリシー</a>
             </li>
-            <li class="">
+            <!-- <li class="">
               <a class="footer-center-top-link" href="">サイトポリシー</a>
-            </li>
+            </li> -->
             <li class="">
               <a class="footer-center-top-link is-sp" href="https://twitter.com/kcfinformation?s=20&t=LVG8eRM9XrwS7Qt42Tm1Fw" target="_blank"><img class="sp-twitter-link" src="<?php echo get_template_directory_uri(); ?>/img/sp-footer-twitter.png" alt="Twitterリンク" /></a>
             </li>
@@ -55,10 +55,10 @@
             <a class="footer-center-top-link" href="https://kyushu-fa.jp/" target="_blank">一般社団法人 九州サッカー協会<span class="link-assosiation"></span></a>
           </li>
           <li class="">
-            <a class="footer-center-top-link" href="">関連リンク</a>
+            <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/link/970/">関連リンク</a>
           </li>
           <figure class="footer-left-link-jfa-sp is-sp">
-            <a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
+            <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
           </figure>
         </ul>
       </div>

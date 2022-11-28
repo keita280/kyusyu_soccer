@@ -25,7 +25,14 @@
       ?>
       <div class="single-wrapper inner">
         <div class="single-container">
-          <span class="cmn-news-cat-info <?php echo $cat_slug; ?>">
+          <span class="cmn-news-cat-info                                         <?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->category_nicename;
+                                          }
+                                        }
+                                        ?>">
             <?php
             $cats = get_the_category();
             foreach ($cats as $cat) {
@@ -39,16 +46,12 @@
             <?php the_title(); ?>
           </h1>
           <div class="single-date-container">
-
-
             <time>
               <div class="single-release">公開日<span><?php the_time('Y.m.d'); ?></span></div>
               <?php if (get_the_time('Y/m/d') != get_the_modified_date('Y/m/d')) : ?>
                 <div class="single-update">最終更新日<span><?php the_modified_date() ?></span></div>
               <?php endif; ?>
             </time>
-
-
           </div>
           <div class="single-body">
             <?php if (has_post_thumbnail('large')) : ?>
@@ -58,14 +61,23 @@
             <?php endif; ?>
             <?php echo the_content(); ?>
           </div>
+          <div class="single-button-wrapper">
+            <a href="<?php echo esc_url(home_url()); ?>" class="single-cmn-btn">トップページへ</a>
+            <?php
+            $h = $_SERVER['HTTP_HOST'];
+            if (!empty($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $h) !== false)) {
+              echo '<a class="single-cmn-btn" href="' . $_SERVER['HTTP_REFERER'] . '">前のページへ戻る</a>';
+            }
+            ?>
+          </div>
         </div>
     <?php endwhile;
   endif; ?>
 
-  
-      <aside class="single-aside inner aside-bg-u18">
-        <?php get_sidebar(); ?>
-      </aside>
+
+    <aside class="single-aside inner aside-bg-u18">
+      <?php get_sidebar(); ?>
+    </aside>
       </div>
 </main>
 <?php get_footer(); ?>

@@ -47,7 +47,21 @@ get_header(); ?>
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
                     <div class="cmn-news-cat-wrapper">
-                      <div class="cmn-news-cat-info info-cat-blue"><?php echo $catname; ?></div>
+                      <div class="cmn-news-cat-info <?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->category_nicename;
+                                          }
+                                        }
+                                        ?>"><?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->cat_name;
+                                          }
+                                        }
+                                        ?></div>
                     </div>
                     <div class="cmn-news-post">
                       <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
@@ -85,7 +99,21 @@ get_header(); ?>
                 <a href="<?php the_permalink(); ?>">
                   <div class="cmn-news-article">
                     <div class="sp-cmn-news-top">
-                      <div class="cmn-news-cat-info info-cat-tournament"><?php echo $catname; ?></div>
+                      <div class="cmn-news-cat-info <?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->category_nicename;
+                                          }
+                                        }
+                                        ?>"><?php
+                                        $cats = get_the_category();
+                                        foreach ($cats as $cat) {
+                                          if ($cat->parent) {
+                                            echo $cat->cat_name;
+                                          }
+                                        }
+                                        ?></div>
                       <div class="cmn-news-date"><?php the_time(get_option('date_format')); ?></div>
                     </div>
                     <div class="sp-cmn-news-bottom">

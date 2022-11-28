@@ -167,7 +167,7 @@
 
 
 /* フォームリセット ボタン */
-.cp-riset-submit {
+.cp-riset-submit,.wpcf7-submit,.cp-submit-primary,.cp-submit-primary {
     display: block;
     max-width: 100%;
     margin: 0 auto;
@@ -185,8 +185,8 @@
     text-decoration: none;
     transition: all ease 0.5s;
     @include cmn.mq('sp'){
-      font-size: 16px;
-      padding: 3px 40px;
+      font-size: 26px;
+      padding: 3px 80px;
     }
 }
 
