@@ -1073,6 +1073,7 @@ img:nth-child(2) {
   margin-bottom: 30px;
   @include cmn.mq('sp'){
     justify-content: center;
+    margin-top: 30px;
   }
 }
 

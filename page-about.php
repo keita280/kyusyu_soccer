@@ -86,11 +86,7 @@ get_header(); ?>
         <!-- スクロールダウン -->
         <div class="scrolldown-container is-pc">
           <figure class="scrolldown">
-<<<<<<< HEAD
             <img src="<?php echo get_template_directory_uri(); ?>/img/Down arrow small.png" alt="下にスクロールするよう促すアイコン" />
-=======
-            <img src="<?php echo get_template_directory_uri(); ?>/img/Down arrow small.png" alt="" />
->>>>>>> e3882f59c36ebe6493aba24ea262f46104483af1
           </figure>
           <span class="about-scroll-txt">scroll</span>
         </div>

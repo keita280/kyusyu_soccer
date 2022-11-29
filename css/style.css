@@ -1357,6 +1357,7 @@ img:nth-child(2) {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin-top: 30px;
   }
 }
 
@@ -2949,13 +2950,9 @@ ul.bottom-menu li:not(:last-child) {
           box-sizing: border-box;
   position: relative;
   border: 1px solid #999;
-  padding: 3px 10px;
+  padding: 10px 10px;
   border-radius: 20px;
-<<<<<<< HEAD
   height: 2.8em;
-=======
-  height: 2.3em;
->>>>>>> e3882f59c36ebe6493aba24ea262f46104483af1
   width: 260px;
   max-width: 326px;
   width: 100%;

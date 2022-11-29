@@ -7,17 +7,10 @@
       <div class="footer-left">
         <div class="footer-left-ttl">九州クラブユースサッカー連盟</div>
         <figure class="footer-left-logo">
-<<<<<<< HEAD
           <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="" /></a>
         </figure>
         <figure class="footer-left-link-jfa is-pc">
           <a href="https://kyushu-fa.jp/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
-=======
-          <a href="<?php echo get_template_directory_uri(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="" /></a>
-        </figure>
-        <figure class="footer-left-link-jfa is-pc">
-          <a href="https://kyushu-fa.jp/"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
->>>>>>> e3882f59c36ebe6493aba24ea262f46104483af1
         </figure>
         <p class="footer-left-arr is-pc">
           © Kyushu Club Youth Football Federation.All Rights Reserved.

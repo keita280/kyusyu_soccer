@@ -90,7 +90,7 @@ get_header(); ?>
               'posts_per_page' => 10, //取得記事件数
             ));
             $cat = get_the_tags();
-            $catname = $cat[0]->cat_name;
+            // $catname = $cat[0]->cat_name;
             foreach ($newslist as $post) :
               setup_postdata($post);
             ?>
