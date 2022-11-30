@@ -50,7 +50,7 @@ get_header(); ?>
               <div class="about-body-bottom-l-txt">
                 <p class="adress-num">〒814-0001</p>
                 <p class="adress">
-                  福岡県福岡市早良区百道浜1-3-70<br />ザ・レジデンシャルスイート・福岡3408<br />丸山
+                  福岡県福岡市早良区百道浜1-3-70<br />ザ・レジデンシャルスイート・福岡5403<br />丸山
                   和毅
                 </p>
               </div>
