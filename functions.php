@@ -19,6 +19,26 @@ function my_setup() {
 }
 add_action('after_setup_theme', 'my_setup');
 
+
+
+
+
+
+/**
+ * ビジュアルエディタでもスタイルを適用するセットアップ
+ **/
+
+//ビジュアルエディタ用スタイル適用
+add_editor_style("editor-style.css");
+//add_theme_support() で editor-styles を指定
+add_theme_support("editor-styles");
+
+
+
+
+
+
+
 /**
 * CSSとJavaScriptの読み込み
 */
@@ -128,3 +148,5 @@ function search_filter($query) {
   return $query;
 }
 add_filter('pre_get_posts', 'search_filter');
+
+?>

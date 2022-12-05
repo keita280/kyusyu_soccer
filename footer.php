@@ -6,12 +6,12 @@
     <div class="footer-inner inner">
       <div class="footer-left">
         <div class="footer-left-ttl">九州クラブユースサッカー連盟</div>
-        <figure class="footer-left-logo">
-          <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="" /></a>
-        </figure>
-        <figure class="footer-left-link-jfa is-pc">
-          <a href="https://kyushu-fa.jp/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
-        </figure>
+        <div class="footer-left-logo">
+          <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="九州クラブユースサッカー連盟のロゴ画像" /></a>
+        </div>
+        <div class="footer-left-link-jfa is-pc">
+          <a href="https://kyushu-fa.jp/"  target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="九州クラブユースサッカー連盟のロゴ画像" /></a>
+        </div>
         <p class="footer-left-arr is-pc">
           © Kyushu Club Youth Football Federation.All Rights Reserved.
         </p>
@@ -57,9 +57,9 @@
           <li class="">
             <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/link/970/">関連リンク</a>
           </li>
-          <figure class="footer-left-link-jfa-sp is-sp">
-            <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="" /></a>
-          </figure>
+          <li class="footer-left-link-jfa-sp is-sp">
+            <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="九州クラブユースサッカー連盟のバナー画像" /></a>
+          </li>
         </ul>
       </div>
       <div class="footer-right is-pc">
@@ -76,9 +76,9 @@
   <!-- //SPナブメニュー -->
   <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
   <!-- bottom navigation -->
-  <section class="navcontainer is-sp">
+  <div class="navcontainer is-sp">
     <ul class="bottom-menu is-sp">
-      <li ontouchstart class="sp-nav-li1">
+      <li class="sp-nav-li1">
         <!--　↓↓項目1. ホーム 　＃の部分にホームのURLを入れる -->
         <a href="<?php echo esc_url(home_url()); ?>"> <span class="mini-text">HOME</span></a>
       </li>
@@ -103,7 +103,7 @@
           <span class="dli-chevron-up"></span><br /><span class="mini-text">上へ</span></a>
       </li>
     </ul>
-  </section>
+  </div>
 
   <!-- swipeｒ -->
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script> -->

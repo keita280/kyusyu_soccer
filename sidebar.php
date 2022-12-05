@@ -9,25 +9,25 @@
                   <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u18/">U-18選手権</a>
                 </li>
                 <li class="aside-sub-li opacity">
-                  <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u15/">U-15選手権</a>
-                </li>
-                <li class="aside-sub-li opacity">
-                  <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-dev">デベロップ大会</a>
-                </li>
-                <li class="aside-sub-li opacity">
-                  <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u-13/">U-13大会</a>
-                </li>
-                <li class="aside-sub-li opacity">
                   <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u18tcc/">U-18TownClubCUP</a>
                 </li>
                 <li class="aside-sub-li opacity">
                   <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u17/">U-17大会</a>
                 </li>
                 <li class="aside-sub-li opacity">
+                  <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-girls/">U-18女子</a>
+                </li>
+                <li class="aside-sub-li opacity">
+                  <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u15/">U-15選手権</a>
+                </li>
+                <li class="aside-sub-li opacity">
+                  <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-dev">U-15デベロップ大会</a>
+                </li>
+                <li class="aside-sub-li opacity">
                   <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u14/">U-14大会</a>
                 </li>
                 <li class="aside-sub-li opacity">
-                  <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-girls/">女子</a>
+                  <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u-13/">U-13大会</a>
                 </li>
               </ul>
             </li>

@@ -22,7 +22,9 @@ get_header(); ?>
   <div class="cmn-article-bg  cmn-news-bg-tournament">
     <div class="cmn-article-wrapper inner">
       <section class="cmn-news-list">
-        <figure class="twitter-news is-pc"><a href=""></a></figure>
+      <a href="https://twitter.com/kcfinformation?s=20&t=LVG8eRM9XrwS7Qt42Tm1Fw" target="_blank">
+        <figure class="twitter-news is-pc"></figure>
+      </a>
         <h2 class="cmn-page-head">TOURNAMENT<span class="cmn-page-head-subttl">大会情報一覧</span></h2>
         <div class="cmn-news-list-container">
 

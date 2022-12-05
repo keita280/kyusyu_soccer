@@ -12,10 +12,10 @@
         Federation
       </h2>
       <div class="mv-img is-pc">
-        <img class="" src="<?php echo get_template_directory_uri(); ?>/img/4192162_m.png" alt="" />
+        <img class="" src="<?php echo get_template_directory_uri(); ?>/img/4192162_m.png" alt="メインビジュアル">
       </div>
       <div class="mv-img is-sp">
-        <img class="" src="<?php echo get_template_directory_uri(); ?>/img/4192162_sp.png" alt="" />
+        <img class="" src="<?php echo get_template_directory_uri(); ?>/img/4192162_sp.png" alt="メインビジュアル">
       </div>
       <a href="https://twitter.com/kcfinformation?s=20&t=LVG8eRM9XrwS7Qt42Tm1Fw" target="_blank">
         <figure class="twitter-news is-pc"></figure>
@@ -86,7 +86,7 @@
                   <div class="top-news-post">
                     <div class="top-news-date"><?php the_time(get_option('date_format')); ?></div>
                     <p class="top-news-name">
-                      <?php the_title(); ?></p>
+                      <?php the_title(); ?>
                     </p>
                   </div>
                   <span class="news-arrow"></span>
@@ -201,10 +201,10 @@
         </a>
         <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-dev/" class="tm-Btn tm-btn-dev">
           <span class="tm-Btn-Text1">九州クラブユース</span>
-          <span class="tm-Btn-Text2">デベロップ</span>
-          <span class="tm-Btn-Text3">大会</span>
+          <span class="tm-Btn-Text2">U-15</span>
+          <span class="tm-Btn-Text3">デベロップ大会</span>
         </a>
-        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u14/" class="tm-Btn tm-btn-u14" class="tm-Btn tm-btn-u14">
+        <a href="<?php echo esc_url(home_url()); ?>/category/info-cat-tournament/info-cat-u14/" class="tm-Btn tm-btn-u14">
           <span class="tm-Btn-Text1">九州クラブユース</span>
           <span class="tm-Btn-Text2">U-14</span>
           <span class="tm-Btn-Text3">大会</span>
@@ -227,7 +227,7 @@
   <section class="top-introduction" id="top-introduction">
     <div class="top-about inner wow fadeInLeft">
       <figure class="top-about-img is-pc">
-        <img src="<?php echo get_template_directory_uri(); ?>/img/top-about.png" alt="" />
+        <img src="<?php echo get_template_directory_uri(); ?>/img/top-about.png" alt="緑色の芝生の上にサッカーボールが置いてある画像">
       </figure>
       <div class="top-about-right">
         <h3 class="top-about-ttl">ABOUT</h3>

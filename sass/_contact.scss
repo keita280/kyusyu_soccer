@@ -187,6 +187,9 @@
     @include cmn.mq('sp'){
       font-size: 26px;
       padding: 3px 80px;
+      border-radius: 60px;
+      width: 250px;
+      height: 60px;
     }
 }
 

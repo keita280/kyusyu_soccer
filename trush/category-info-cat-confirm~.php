@@ -22,7 +22,9 @@ get_header(); ?>
   <div class="cmn-article-bg  cmn-news-bg-entry">
     <div class="cmn-article-wrapper inner">
       <section class="cmn-news-list">
-        <figure class="twitter-news is-pc"><a href=""></a></figure>
+      <a href="https://twitter.com/kcfinformation?s=20&t=LVG8eRM9XrwS7Qt42Tm1Fw" target="_blank">
+        <figure class="twitter-news is-pc"></figure>
+      </a>
         <h2 class="cmn-page-head">ENTRY<span class="cmn-page-head-subttl">加盟登録一覧</span></h2>
         <div class="cmn-news-list-container">
 

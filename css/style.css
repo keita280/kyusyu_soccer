@@ -2261,6 +2261,9 @@ ul.bottom-menu li:not(:last-child) {
   .cp-riset-submit, .wpcf7-submit, .cp-submit-primary, .cp-submit-primary {
     font-size: 26px;
     padding: 3px 80px;
+    border-radius: 60px;
+    width: 250px;
+    height: 60px;
   }
 }
 

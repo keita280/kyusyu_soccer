@@ -23,7 +23,9 @@ get_header(); ?>
       <div class="cmn-article-bg  cmn-news-bg">
         <div class="cmn-article-wrapper tag-inner">
           <section class="cmn-news-list tag-news-list-u18tcc">
-        <figure class="twitter-news is-pc"><a href=""></a></figure>
+          <a href="https://twitter.com/kcfinformation?s=20&t=LVG8eRM9XrwS7Qt42Tm1Fw" target="_blank">
+        <figure class="twitter-news is-pc"></figure>
+      </a>
         <h2 class="cmn-page-head u18tcc-page-head">U-18 TownClubCUP<span class="cmn-page-head-subttl">九州クラブユースU-18TownClubCUP　大会情報</span></h2>
         <div class="cmn-news-list-container">
 
