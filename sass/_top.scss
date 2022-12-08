@@ -10,6 +10,9 @@
 
 .h1-pc {
   width: 68.98%;
+  @include cmn.mq('sp'){
+    width: 100%;
+  }
 }
 
 #toggle {
@@ -157,9 +160,22 @@
 .header_inner {
 }
 
+.header_top_pc-container {
+  display: flex;
+  align-items: center;
+  > p {
+    margin-left: 20px;
+    font-size: 24px;
+    @include cmn.mq('sp'){
+      margin-left: 10px;
+      font-size: 16px;
+    }
+  }
+}
+
 .header_top {
   max-width: 1080px;
-  padding: 28.3px 40px 14.3px 10px;
+  padding: 10px 10px 10px 10px;
   display: flex;
   @include cmn.mq("sp") {
     padding: 12px 18px 20px 18px;
@@ -167,8 +183,12 @@
 }
 
 .logo-pc {
-  width: 547px;
-  height: 59.4px;
+  width: 70px;
+  height: 70px;
+  @include cmn.mq('sp'){
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .logo-sp {
@@ -1009,7 +1029,7 @@ img:nth-child(2) {
   color: #f7d239;
   margin-bottom: 40px;
   @include cmn.mq('sp'){
-    color: #fff;
+    color: #f7d239;
     margin-bottom: 20px;
   }
 }
@@ -1032,29 +1052,31 @@ img:nth-child(2) {
   }
 }
 
-.footer-left-link-jfa {
-  width: 193px;
-  height: 128px;
-  margin-bottom: 34px;
-  font-size: 13px;
-  transition: all 0.3s;
-  &:hover {
-    opacity: 0.7;
-  }
-}
+// .footer-left-link-jfa {
+//   width: 150px;
+//   height: 150px;
+//   margin-bottom: 34px;
+//   font-size: 13px;
+//   transition: all 0.3s;
+//   &:hover {
+//     opacity: 0.7;
+//   }
+// }
 
-.footer-left-link-jfa-sp {
-  width: 124px;
-  height: 83px;
+.footer-left-link-sp {
+  width: 150px;
+  height: 100%;
   margin-top: 34px;
   margin-bottom: 34px;
   font-size: 13px;
   transition: all 0.3s;
+  margin: 0 auto;
+  padding: 10px;
   &:hover {
     opacity: 0.7;
   }
-  @include cmn.mq('sp'){
-    margin: 0 auto;
+  & + & {
+    // margin-top: 20px;
   }
 }
 
@@ -1165,3 +1187,48 @@ img:nth-child(2) {
   }
 }
 
+.footer-links {
+  @include cmn.mq('sp'){
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+.footer-baners {
+  margin-top: 40px;
+  height: 100%;
+}
+
+.footer-baners-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: inherit;
+   & a {
+     width: 200px;
+     height: auto;
+     padding: 10px;
+   }
+}
+
+.footer-baners-wrapper a {
+
+}
+
+.footer-baners-ttl {
+  font-size: 32px;
+  color: #f7d239;
+  @include cmn.mq('sp'){
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+.footer-baners {
+}
+
+.footer-links-cointainer {
+  margin-top: 60px;
+}

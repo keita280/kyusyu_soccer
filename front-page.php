@@ -8,8 +8,8 @@
   <section class="mv">
     <div class="mv-inner">
       <h2 class="mv-title">
-        <span class="mv-sp">Kyushu Club Youth</span><br />Football
-        Federation
+        <span class="mv-sp">KYUSHU CLUB YOUTH</span><br />FOOTBALL
+        FEDERATION
       </h2>
       <div class="mv-img is-pc">
         <img class="" src="<?php echo get_template_directory_uri(); ?>/img/4192162_m.png" alt="メインビジュアル">
