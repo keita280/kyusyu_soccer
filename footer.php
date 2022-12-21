@@ -9,7 +9,7 @@
         <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/footer-logo.png" alt="九州クラブユースサッカー連盟のロゴ画像" /></a>
       </div>
       <p class="footer-left-arr is-pc">
-        © Kyushu Club Youth Football Federation.All Rights Reserved.
+        © KYUSHU CLUB YOUTH FOOTBALL FEDERATION.All Rights Reserved.
       </p>
     </div>
     <div class="footer-center">
@@ -47,9 +47,9 @@
         </ul>
       </div>
       <ul class="footer-center-bottom">
-        <li class="">
+        <!-- <li class="">
           <a class="footer-center-top-link" href="https://kyushu-fa.jp/" target="_blank">一般社団法人 九州サッカー協会<span class="link-assosiation"></span></a>
-        </li>
+        </li> -->
         <li class="">
           <a class="footer-center-top-link" href="<?php echo esc_url(home_url()); ?>/link/970/">関連リンク</a>
         </li>
@@ -59,7 +59,10 @@
       <h4 class="footer-baners-ttl">sponser</h4>
       <ul class="footer-links is-sp">
         <li class="footer-left-link-sp ">
-          <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="九州クラブユースサッカー連盟のバナー画像" /></a>
+          <a href="https://kyushu-fa.jp/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="九州クラブユースサッカー連盟のバナー画像" /></a>
+        </li>
+        <li class="footer-left-link-sp is-sp">
+          <a href="https://www.jcy.jp/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/jcy.webp" alt="jcyのバナー画像" /></a>
         </li>
         <li class="footer-left-link-sp is-sp">
           <a href="http://www.med-sakai.jp/clinic/sports_clinic/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/sakai-logo.jpeg" alt="堺整形外科のバナー画像" /></a>
@@ -75,9 +78,10 @@
     </div>
   </div>
   <div class="footer-baners inner is-pc">
-    <p class="footer-baners-ttl">sponser</p>
+    <p class="footer-baners-ttl">sponsor</p>
     <div class="footer-baners-wrapper">
       <a href="https://kyushu-fa.jp/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/banner_kyfa.png" alt="九州クラブユースサッカー連盟のロゴ画像" /></a>
+      <a href="https://www.jcy.jp/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/jcy.webp" alt="九州クラブユースサッカー連盟のロゴ画像" /></a>
       <a href="http://www.med-sakai.jp/clinic/sports_clinic/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/sakai-logo.jpeg" alt="堺整形外科のバナー画像" /></a>
       <a href="http://www.kyodo-photo.co.jp/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/img/kyodo-logo.png" alt="共同写真企画のバナー画像" /></a>
     </div>
@@ -85,7 +89,7 @@
   </div>
 </section>
 <div class="footer-bottom is-sp">
-  <p>© Kyushu Club Youth Football Federation.All Rights Reserved.</p>
+  <p>© KYUSHU CLUB YOUTH FOOTBALL FEDERATION.All Rights Reserved.</p>
 </div>
 
 <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->

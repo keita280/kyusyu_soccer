@@ -158,6 +158,13 @@
 //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠
 
 .header_inner {
+  background: linear-gradient(
+  340deg,
+  #D6E4FF 0%,
+  #D6E4FF 50%,
+  #fff 50%,
+  #fff 100%
+);
 }
 
 .header_top_pc-container {
@@ -264,7 +271,7 @@
 
 .mv-title {
   color: #fff;
-  font-size: 6em;
+  font-size: 5em;
   font-weight: 700;
   white-space: nowrap;
   left: 50%;
@@ -273,7 +280,7 @@
   transform: translate(-50%, -50%);
   letter-spacing: 0.05em;
   @include cmn.mq("sp") {
-    font-size: 2em;
+    font-size: 1.6em;
   }
 }
 
@@ -416,8 +423,8 @@
 .top-news-cat-info {
   height: 24px;
   border-radius: 5px 0px;
-  background: cmn.$color-blue;
-  color: #fff;
+  // background: cmn.$color-blue;
+  color: #111111;
   text-align: center;
   display: inline-block;
   padding: 5px 20px;
@@ -1082,6 +1089,7 @@ img:nth-child(2) {
 
 .footer-left-arr {
   color: #fff;
+  font-size: 12px;
 }
 
 .footer-center {

@@ -75,7 +75,6 @@ get_header(); ?>
                   </div>
                 </a>
               </li>
-
             <?php
             endforeach;
             wp_reset_postdata();

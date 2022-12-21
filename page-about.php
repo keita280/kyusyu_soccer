@@ -22,7 +22,7 @@ get_header(); ?>
         <div class="about-body-top">
           <div class="about-body-top-l">
             <h3 class="about-body-ttl">
-              Kyushu Club Youth Football Federation
+            KYUSHU CLUB YOUTH FOOTBALL FEDERATION
             </h3>
             <h3 class="about-body-subttl">九州クラブユースサッカー連盟</h3>
           </div>

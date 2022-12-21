@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: お問い合わせページ
+Template Name: 再コンタクトページ
 */
 get_header(); ?>
 <!-- //＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠＠ -->
